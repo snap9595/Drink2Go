@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Барбершоп «Бородинский»</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="page-header">
+  <a class="page-header__logo" href="index.html">
+    <picture>
+      <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+      <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+      <img src="img/logotype-mobile.svg" width="370" height="153" alt="Барбершоп «Бородинский»">
+    </picture>
+  </a>
+  <nav class="main-nav">
+    <button class="main-nav__toggle" type="button">Открыть меню</button>
+    <ul class="main-nav__site-list">
+      <li class="main-nav__site-item"><a href="index.html">Главная</a></li>
+      <li class="main-nav__site-item"><a href="#">Наши работы</a></li>
+      <li class="main-nav__site-item main-nav__site-item--active"><a>Записаться</a></li>
+      <li class="main-nav__site-item"><a href="#">Контакты</a></li>
+      <li class="main-nav__site-item"><a href="#">HTML Academy</a></li>
+    </ul>
+    <ul class="main-nav__user-list">
+      <li class="main-nav__user-item"><a class="main-nav__user-login" href="#" title="Войти">Вход</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="inner-page">
+
+  <header class="inner-page-header">
+    <h1 class="inner-page-header__title">Запись на стрижку</h1>
+    <a class="button" href="#">На главную</a>
+  </header>
+
+  <form class="record" method="post" action="https://echo.htmlacademy.ru">
+    <fieldset>
+      <legend class="visually-hidden"></legend>
+      <div class="record__col-3">
+        <p class="record__item">
+          <label for="user-first-name">Имя</label>
+          <input id="user-first-name" type="text" placeholder="Владимир">
+        </p>
+        <p class="record__item">
+          <label for="user-last-name">Фамилия</label>
+          <input id="user-last-name" type="text" placeholder="Дроздов">
+        </p>
+        <p class="record__item">
+          <label for="user-second-name">Отчество</label>
+          <input id="user-second-name" type="text" placeholder="Васильевич">
+        </p>
+      </div>
+      <div class="filters__col-2">
+        <p class="record__item">
+          <label for="user-tel">Контактный телефон</label>
+          <input id="user-tel" type="tel">
+        </p>
+        <p class="record__item">
+          <label for="user-email">Контактный e-mail</label>
+          <input id="user-email" type="email">
+        </p>
+      </div>
+      <p class="record__item">
+        <label for="user-message">Доп. информация для мастера</label>
+        <textarea name="user-message" id="user-message" placeholder="Ещё хочу покрасить волосы в синий"></textarea>
+      </p>
+    </fieldset>
+    <fieldset class="filter">
+      <legend class="filter__title">Выберите модель бороды:</legend>
+      <ul class="filter__list">
+        <li class="filter__item filter__item--radio">
+          <input class="visually-hidden filter__input filter__input--radio" type="radio" name="type" id="type-admiral" checked>
+          <label for="type-admiral">
+            Адмирал
+            <img src="img/type-admiral.svg" width="55" height="50" alt="Модель бороды «Адмирал»">
+          </label>
+        </li>
+        <li class="filter__item filter__item--radio">
+          <input class="visually-hidden filter__input filter__input--radio" type="radio" name="type" id="type-lumberjack">
+          <label for="type-lumberjack">
+            Лесоруб
+            <img src="img/type-lumberjack.svg" width="60" height="68" alt="Модель бороды «Лесоруб»">
+          </label>
+        </li>
+        <li class="filter__item filter__item--radio">
+          <input class="visually-hidden filter__input filter__input--radio" type="radio" name="type" id="type-polar">
+          <label for="type-polar">
+            Полярник
+            <img src="img/type-polar.svg" width="63" height="80" alt="Модель бороды «Полярник»">
+          </label>
+        </li>
+        <li class="filter__item filter__item--radio">
+          <input class="visually-hidden filter__input filter__input--radio" type="radio" name="type" id="type-boyar">
+          <label for="type-boyar">
+            Боярин
+            <img src="img/type-boyar.svg" width="59" height="98" alt="Модель бороды «Боярин»">
+          </label>
+        </li>
+        <li class="filter__item filter__item--radio">
+          <input class="visually-hidden filter__input filter__input--radio" type="radio" name="type" id="type-sage">
+          <label for="type-sage">
+            Мудрец
+            <img src="img/type-sage.svg" width="45" height="103" alt="Модель бороды «Мудрец»">
+          </label>
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="filter">
+      <legend class="filter__title">Дополнительгные услуги:</legend>
+      <ul class="filter__list">
+        <li class="filter__item filter__item--checkbox">
+          <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="service-color" id="service-color" checked>
+          <label for="service-color">Покрасить бороду</label>
+        </li>
+        <li class="filter__item filter__item--checkbox">
+          <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="service-comb" id="service-comb" checked>
+          <label for="service-comb">Причесать бороду</label>
+        </li>
+        <li class="filter__item filter__item--checkbox">
+          <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="service-grey" id="service-grey">
+          <label for="service-grey">Убрать седину</label>
+        </li>
+        <li class="filter__item filter__item--checkbox">
+          <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="service-moustache" id="service-moustache">
+          <label for="service-moustache">Накрутить усы</label>
+        </li>
+        <li class="filter__item filter__item--checkbox">
+          <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="service-whiskey" id="service-whiskey">
+          <label for="service-whiskey">Подровнять виски</label>
+        </li>
+        <li class="filter__item filter__item--checkbox">
+          <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="service-polish" id="service-polish">
+          <label for="service-polish">Отполировать лысину</label>
+        </li>
+      </ul>
+    </fieldset>
+    <input type="submit" value="Отправить заявку">
+  </form>
+
+</main>
+
+<footer class="page-footer">
+  <div class="page-footer__wrapper">
+    <p class="page-footer__contacts">
+      <b>Барбершоп «Бородинский»</b><br>
+      г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
+      <a href="tel:+78125556666"><span class="page-footer__contacts-hidden">Тел.:</span> +7 (812) 555-66-66</a>
+    </p>
+    <p class="page-footer__social social">
+      <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+      <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+      <a class="social__link social__link--in" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+    </p>
+    <p class="page-footer__copyright">
+      Разработано:
+      <a class="button page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
