@@ -11,7 +11,7 @@
 <body>
 
 <header class="page-header">
-  <h1 class="page-header__title visually-hidden">Барбершоп «Бородинский» – истинно мужская классика</h1>
+
   <a class="page-header__logo">
     <picture>
       <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
@@ -19,6 +19,11 @@
       <img src="img/logotype-mobile.svg" width="370" height="153" alt="Барбершоп «Бородинский»">
     </picture>
   </a>
+
+  <!--
+    модификатор main-nav--open для открытого состояния,
+    модификатор main-nav--no-js для состояния без js
+  -->
   <nav class="main-nav">
     <button class="main-nav__toggle" type="button">Открыть меню</button>
     <ul class="main-nav__site-list">
@@ -32,17 +37,20 @@
       <li class="main-nav__user-item"><a class="main-nav__user-login" href="#" title="Войти">Вход</a></li>
     </ul>
   </nav>
+
 </header>
 
 <main class="page-main">
+  <h1 class="page-header__title visually-hidden">Барбершоп «Бородинский» – истинно мужская классика</h1>
 
   <section class="stats">
     <header class="stats__header">
       <h2 class="stats__title visually-hidden">Статистика Барбершопа</h2>
       <b class="stats__slogan">Стрижка у нас это выгодно!</b>
       <p class="stats__intro">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
-      <small class="stats__legend"><sup>*</sup> — приведённые данные ложь</small>
+      <small class="stats__legend stats__legend--top"><sup>*</sup> — приведённые данные ложь</small>
     </header>
+
     <table class="stats__list">
       <tr>
         <td class="stats__value">1 500<sup>*</sup></td>
@@ -61,14 +69,14 @@
         <td class="stats__field">лайков<br> и комплиментов</td>
       </tr>
     </table>
+
+    <small class="stats__legend stats__legend--bottom"><sup>*</sup> — приведённые данные ложь</small>
   </section>
 
   <section class="advantages">
     <div class="advantages__wrapper slider">
       <h2 class="advantages__title visually-hidden">Наши преимущества</h2>
-      <input class="slider__input" type="radio" name="advantages" id="advantages-input-1" checked>
-      <input class="slider__input" type="radio" name="advantages" id="advantages-input-2">
-      <input class="slider__input" type="radio" name="advantages" id="advantages-input-3">
+
       <ul class="advantages__list slider__list">
         <li class="advantages__item advantages__item--fast slider__item">
           <h3 class="advantages__item-title">Быстро</h3>
@@ -83,40 +91,45 @@
           <p>Наши мастера — профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
         </li>
       </ul>
+
       <p class="advantages__toggles slider__toggles">
-        <label class="slider__toggle" for="advantages-input-1">1</label>
-        <label class="slider__toggle" for="advantages-input-2">2</label>
-        <label class="slider__toggle" for="advantages-input-3">3</label>
+        <button type="button" class="slider__toggle">1</button>
+        <button type="button" class="slider__toggle">2</button>
+        <button type="button" class="slider__toggle">3</button>
       </p>
+
     </div>
   </section>
 
   <section class="news">
-    <h2 class="news__title">Новости и акции</h2>
-    <ul class="news__items">
-      <li class="news__item">
-        <time class="news__date" datetime="2017-09-29"><b>29</b> сент</time>
-        <p>Нам наконец-то завезли Егермейстер! Теперь вы можете пропустить стаканчик во время стрижки.</p>
-      </li>
-      <li class="news__item">
-        <time class="news__date" datetime="2017-09-19"><b>19</b> сент</time>
-        <p>В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!</p>
-      </li>
-      <li class="news__item">
-        <time class="news__date" datetime="2017-09-09"><b>9</b> сент</time>
-        <p>Всё дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чём здесь подвох!</p>
-      </li>
-    </ul>
-    <a class="news__to-all button" href="#">Показать все</a>
+    <div class="news__wrapper">
+      <h2 class="news__title">Новости и акции</h2>
+
+      <ul class="news__items">
+        <li class="news__item">
+          <time class="news__date" datetime="2017-09-29"><b>29</b> сент</time>
+          <p>Нам наконец-то завезли Егермейстер! Теперь вы можете пропустить стаканчик во время стрижки.</p>
+        </li>
+        <li class="news__item">
+          <time class="news__date" datetime="2017-09-19"><b>19</b> сент</time>
+          <p>В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!</p>
+        </li>
+        <li class="news__item">
+          <time class="news__date" datetime="2017-09-09"><b>9</b> сент</time>
+          <p>Всё дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чём здесь подвох!</p>
+        </li>
+      </ul>
+
+      <a class="news__to-all button" href="#">Показать все</a>
+    </div>
   </section>
 
   <section class="reviews">
     <div class="reviews__wrapper slider">
       <h2 class="reviews__title">Отзывы о нас</h2>
+
       <a class="reviews__write button" href="#">Оставить свой</a>
-      <input class="slider__input" type="radio" name="reviews" id="reviews-input-1" checked>
-      <input class="slider__input" type="radio" name="reviews" id="reviews-input-2">
-      <input class="slider__input" type="radio" name="reviews" id="reviews-input-3">
+
       <div class="reviews__list slider__list">
         <blockquote class="reviews__item slider__item">
           <p class="reviews__author-picture">
@@ -125,6 +138,7 @@
           <cite class="reviews__author-name">Трэвис Баркер</cite>
           <p>Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
         </blockquote>
+
         <blockquote class="reviews__item slider__item">
           <p class="reviews__author-picture">
             <img src="img/pic-travis.jpg" width="50" height="33" alt="Фото Джона Смита">
@@ -132,6 +146,7 @@
           <cite class="reviews__author-name">Джон Смит</cite>
           <p>Отличную стрижку мне сделали ребята.</p>
         </blockquote>
+
         <blockquote class="reviews__item slider__item">
           <p class="reviews__author-picture">
             <img src="img/pic-travis.jpg" width="50" height="33" alt="Фото Ивана Бородайло">
@@ -139,13 +154,15 @@
           <cite class="reviews__author-name">Иван Бородайло</cite>
           <p>В Бородинском ваша борода в надёжных руках!</p>
         </blockquote>
+
         <button class="reviews__prev" type="button">Предыдущий отзыв</button>
         <button class="reviews__next" type="button">Следующий отзыв</button>
       </div>
+
       <p class="reviews__toggles slider__toggles">
-        <label class="slider__toggle" for="reviews-input-1">1</label>
-        <label class="slider__toggle" for="reviews-input-2">2</label>
-        <label class="slider__toggle" for="reviews-input-3">3</label>
+        <button type="button" class="slider__toggle">1</button>
+        <button type="button" class="slider__toggle">2</button>
+        <button type="button" class="slider__toggle">3</button>
       </p>
     </div>
   </section>
@@ -153,20 +170,37 @@
 </main>
 
 <footer class="page-footer">
-  <p class="page-footer__contacts">
-    <b>Барбершоп «Бородинский»</b><br>
-    г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
-    <a href="tel:+78125556666"><span class="page-footer__contacts-hidden">Тел.:</span> +7 (812) 555-66-66</a>
-  </p>
-  <p class="page-footer__social social">
-    <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-    <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-    <a class="social__link social__link--in" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
-  </p>
-  <p class="page-footer__copyright">
-    Разработано:
-    <a class="button page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-  </p>
+  <div class="page-footer__wrapper">
+
+    <div class="page-footer__contacts">
+      <b>Барбершоп «Бородинский»</b>
+      <p>
+        г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
+        <a href="tel:+78125556666"><span class="phone-mobile-hidden">Тел.:</span> +7 (812) 555-66-66</a>
+      </p>
+    </div>
+
+    <div class="page-footer__social">
+      <b>Давайте дружить!</b>
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--in" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="page-footer__copyright">
+      <b>Разработано:</b>
+      <a class="button developed-by" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+    </div>
+
+  </div>
 </footer>
 
 </body>
