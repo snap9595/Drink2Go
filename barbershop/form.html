@@ -41,72 +41,72 @@
   </header>
 
   <section class="record">
-    <form class="record" method="post" action="https://echo.htmlacademy.ru">
+    <form class="record__form" method="post" action="https://echo.htmlacademy.ru">
       <fieldset>
-        <legend class="visually-hidden"></legend>
+        <legend class="visually-hidden">Данные для записи</legend>
         <div class="record__col-3">
           <p class="record__item">
-            <label for="user-first-name">Имя</label>
-            <input id="user-first-name" type="text" placeholder="Владимир">
+            <label for="user__first-name">Имя</label>
+            <input id="user__first-name" type="text" placeholder="Владимир">
           </p>
           <p class="record__item">
-            <label for="user-last-name">Фамилия</label>
-            <input id="user-last-name" type="text" placeholder="Дроздов">
+            <label for="user__last-name">Фамилия</label>
+            <input id="user__last-name" type="text" placeholder="Дроздов">
           </p>
           <p class="record__item">
-            <label for="user-second-name">Отчество</label>
-            <input id="user-second-name" type="text" placeholder="Васильевич">
+            <label for="user__second-name">Отчество</label>
+            <input id="user__second-name" type="text" placeholder="Васильевич">
           </p>
         </div>
         <div class="filters__col-2">
           <p class="record__item">
-            <label for="user-tel">Контактный телефон</label>
-            <input id="user-tel" type="tel">
+            <label for="user__tel">Контактный телефон</label>
+            <input id="user__tel" type="tel">
           </p>
           <p class="record__item">
-            <label for="user-email">Контактный e-mail</label>
-            <input id="user-email" type="email">
+            <label for="user__email">Контактный e-mail</label>
+            <input id="user__email" type="email">
           </p>
         </div>
         <p class="record__item">
-          <label for="user-message">Доп. информация для мастера</label>
-          <textarea name="user-message" id="user-message" placeholder="Ещё хочу покрасить волосы в синий"></textarea>
+          <label for="user__message">Доп. информация для мастера</label>
+          <textarea name="user__message" id="user__message" placeholder="Ещё хочу покрасить волосы в синий"></textarea>
         </p>
       </fieldset>
       <fieldset class="filter">
         <legend class="filter__title">Выберите модель бороды:</legend>
         <ul class="filter__list">
           <li class="filter__item filter__item--radio">
-            <input class="visually-hidden filter__input filter__input--radio" type="radio" name="type" id="type-admiral" checked>
-            <label for="type-admiral">
+            <input class="visually-hidden filter__input filter__input--radio" type="radio" name="type" id="type__admiral" checked>
+            <label for="type__admiral">
               Адмирал
               <img src="img/type-admiral.svg" width="55" height="50" alt="Модель бороды «Адмирал»">
             </label>
           </li>
           <li class="filter__item filter__item--radio">
-            <input class="visually-hidden filter__input filter__input--radio" type="radio" name="type" id="type-lumberjack">
-            <label for="type-lumberjack">
+            <input class="visually-hidden filter__input filter__input--radio" type="radio" name="type" id="type__lumberjack">
+            <label for="type__lumberjack">
               Лесоруб
               <img src="img/type-lumberjack.svg" width="60" height="68" alt="Модель бороды «Лесоруб»">
             </label>
           </li>
           <li class="filter__item filter__item--radio">
-            <input class="visually-hidden filter__input filter__input--radio" type="radio" name="type" id="type-polar">
-            <label for="type-polar">
+            <input class="visually-hidden filter__input filter__input--radio" type="radio" name="type" id="type__polar">
+            <label for="type__polar">
               Полярник
               <img src="img/type-polar.svg" width="63" height="80" alt="Модель бороды «Полярник»">
             </label>
           </li>
           <li class="filter__item filter__item--radio">
-            <input class="visually-hidden filter__input filter__input--radio" type="radio" name="type" id="type-boyar">
-            <label for="type-boyar">
+            <input class="visually-hidden filter__input filter__input--radio" type="radio" name="type" id="type__boyar">
+            <label for="type__boyar">
               Боярин
               <img src="img/type-boyar.svg" width="59" height="98" alt="Модель бороды «Боярин»">
             </label>
           </li>
           <li class="filter__item filter__item--radio">
-            <input class="visually-hidden filter__input filter__input--radio" type="radio" name="type" id="type-sage">
-            <label for="type-sage">
+            <input class="visually-hidden filter__input filter__input--radio" type="radio" name="type" id="type__sage">
+            <label for="type__sage">
               Мудрец
               <img src="img/type-sage.svg" width="45" height="103" alt="Модель бороды «Мудрец»">
             </label>
@@ -117,32 +117,32 @@
         <legend class="filter__title">Дополнительгные услуги:</legend>
         <ul class="filter__list">
           <li class="filter__item filter__item--checkbox">
-            <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="service-color" id="service-color" checked>
-            <label for="service-color">Покрасить бороду</label>
+            <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="service-color" id="service__color" checked>
+            <label for="service__color">Покрасить бороду</label>
           </li>
           <li class="filter__item filter__item--checkbox">
-            <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="service-comb" id="service-comb" checked>
-            <label for="service-comb">Причесать бороду</label>
+            <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="service-comb" id="service__comb" checked>
+            <label for="service__comb">Причесать бороду</label>
           </li>
           <li class="filter__item filter__item--checkbox">
-            <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="service-grey" id="service-grey">
-            <label for="service-grey">Убрать седину</label>
+            <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="service-grey" id="service__grey">
+            <label for="service__grey">Убрать седину</label>
           </li>
           <li class="filter__item filter__item--checkbox">
-            <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="service-moustache" id="service-moustache">
-            <label for="service-moustache">Накрутить усы</label>
+            <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="service-moustache" id="service__moustache">
+            <label for="service__moustache">Накрутить усы</label>
           </li>
           <li class="filter__item filter__item--checkbox">
-            <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="service-whiskey" id="service-whiskey">
-            <label for="service-whiskey">Подровнять виски</label>
+            <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="service-whiskey" id="service__whiskey">
+            <label for="service__whiskey">Подровнять виски</label>
           </li>
           <li class="filter__item filter__item--checkbox">
-            <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="service-polish" id="service-polish">
-            <label for="service-polish">Отполировать лысину</label>
+            <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="service-polish" id="service__polish">
+            <label for="service__polish">Отполировать лысину</label>
           </li>
         </ul>
       </fieldset>
-      <input type="submit" value="Отправить заявку">
+      <input class="filter__button" type="submit" value="Отправить заявку">
     </form>
   </section>
 
@@ -163,13 +163,13 @@
       <b>Давайте дружить!</b>
       <ul class="social">
         <li class="social__item">
-          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--in" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
         </li>
       </ul>
     </div>
