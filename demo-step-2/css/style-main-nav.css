@@ -12,6 +12,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+/* Фоны для сеток лежат в файле outlines.less */
 /* Файл blocks/page-header.less */
 .page-header {
   display: flex;
@@ -34,7 +35,7 @@ img {
     height: 648px;
   }
 }
-/* Стили для nav-mock */
+/* Стили для nav-mock в начале демки есть - потом удаляются */
 /*.nav-mock {
   !* Временно для сетки *!
   min-height: 310px;
@@ -46,6 +47,7 @@ img {
     min-height: 70px;
   }
 }*/
+/* Заглушка и затемнение шапки */
 .page-header,
 .page-header__logo {
   outline: none;

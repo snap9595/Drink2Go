@@ -12,6 +12,19 @@ img {
   max-width: 100%;
   height: auto;
 }
+/* Фоны для сеток лежат в файле outlines.less */
+/* Стили для nav-mock */
+.nav-mock {
+    /* Временно для сетки */
+  min-height: 310px;
+}
+
+@media (min-width: 768px) {
+  .nav-mock {
+        /* Временно для сетки */
+    min-height: 70px;
+  }
+}
 /* Файл blocks/page-header.less */
 .page-header {
   display: flex;
@@ -32,17 +45,5 @@ img {
 @media (min-width: 1200px) {
   .page-header__logo {
     height: 648px;
-  }
-}
-/* Стили для nav-mock */
-.nav-mock {
-    /* Временно для сетки */
-  min-height: 310px;
-}
-
-@media (min-width: 768px) {
-  .nav-mock {
-        /* Временно для сетки */
-    min-height: 70px;
   }
 }

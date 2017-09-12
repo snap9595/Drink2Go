@@ -12,4 +12,91 @@ img {
   max-width: 100%;
   height: auto;
 }
+/* Фоны для сеток лежат в файле outlines.less */
+/* Настройки скриншота-подложки для сетки */
+body {
+  min-height: 1050px;
+}
+
+.block-mock {
+  height: 390px;
+}
+
+@media (min-width: 768px) {
+  .block-mock {
+    height: 469px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .block-mock {
+    height: 720px;
+  }
+}
 /* Файл blocks/stats.less */
+.stats {
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .stats {
+    width: 640px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .stats {
+    width: 960px;
+  }
+}
+
+.stats__header {
+    /* Временно для сетки */
+  min-height: 130px;
+  padding-top: 27px;
+  padding-right: 38px;
+  padding-bottom: 26px;
+  padding-left: 38px;
+}
+
+.stats__list {
+  width: 100%;
+    /* Временно для сетки (таблица на min-height не реагирует, поэтому height) */
+  height: 320px;
+}
+
+@media (min-width: 768px) {
+  .stats {
+    margin-top: -184px;
+  }
+
+  .stats__header {
+    padding: 0;
+    padding-top: 31px;
+    padding-bottom: 24px;
+  }
+
+  .stats__list {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .stats {
+    display: flex;
+    margin-top: -159px;
+  }
+
+  .stats__header {
+    width: 240px;
+        /* Временно для сетки */
+    min-height: 263px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .stats__list {
+    width: 640px;
+  }
+}
