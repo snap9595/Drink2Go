@@ -2,6 +2,33 @@
 @import "global/scaffolding";
 @import "global/mixins";
 
+/* Файл blocks/page-header.less */
+
+@import "blocks/page-header";
+
+/* Стили для nav-mock */
+
+/*.nav-mock {
+  !* Временно для сетки *!
+  min-height: 310px;
+}
+
+@media (min-width: @tablet-widths) {
+  .nav-mock {
+    !* Временно для сетки *!
+    min-height: 70px;
+  }
+}*/
+
+.page-header,
+.page-header__logo {
+  .no-outline();
+}
+
+.page-header__logo {
+  background: rgba(255, 255, 255, 0.5);
+}
+
 /* Файл blocks/main-nav.less */
 
 @import "blocks/main-nav";

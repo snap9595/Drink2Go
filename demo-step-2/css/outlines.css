@@ -126,18 +126,18 @@ body > * > * > * > * > *::before {
   left: auto;
 }
 
-.main-nav__items::before {
+.site-list::before {
   top: auto;
   bottom: 3px;
 }
 
-.main-nav__user-items::before {
+.user-list::before {
   top: auto;
   bottom: 3px;
 }
 
 @media (min-width: 768px) {
-  .main-nav__user-items::before {
+  .user-list::before {
     content: '...';
   }
 }
