@@ -1,0 +1,36 @@
+/* Файл scaffolding.less */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 27px;
+  color: #f7f4f1;
+  background-color: #292929;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Фоны для сеток лежат в файле outlines.less */
+/* Настройки скриншота-подложки для сетки */
+body {
+  min-height: 1050px;
+}
+
+.block-mock {
+  height: 390px;
+}
+
+@media (min-width: 768px) {
+  .block-mock {
+    height: 469px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .block-mock {
+    height: 720px;
+  }
+}
+/* Файл blocks/advantages.less */
