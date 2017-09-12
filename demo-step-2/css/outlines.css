@@ -1,4 +1,4 @@
-/* Для демок */
+/* Фоны */
 body {
   min-height: 750px;
   background: #292929 url('../img/bb-mobile.png') no-repeat 50% 0;
@@ -18,7 +18,7 @@ body {
     background-size: 1391px auto;
   }
 }
-
+/* Обводки */
 body > *,
 body > * > *,
 body > * > * > *,
@@ -126,13 +126,6 @@ body > * > * > * > * > *::before {
   left: auto;
 }
 
-@media (min-width: 768px) {
-  .nav-mock::before {
-    right: 2px;
-    left: auto;
-  }
-}
-
 .site-list::before {
   top: auto;
   bottom: 3px;
@@ -141,12 +134,6 @@ body > * > * > * > * > *::before {
 .user-list::before {
   top: auto;
   bottom: 3px;
-}
-
-@media (min-width: 768px) {
-  .user-list::before {
-    content: '...';
-  }
 }
 
 .stats__header::before,
@@ -188,6 +175,15 @@ body > * > * > * > * > *::before {
 @media (min-width: 768px) {
   .page-footer__copyright::before {
     font-size: 10px;
+  }
+
+  .user-list::before {
+    content: '...';
+  }
+
+  .nav-mock::before {
+    right: 2px;
+    left: auto;
   }
 }
 

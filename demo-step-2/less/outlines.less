@@ -1,7 +1,7 @@
 @import "global/variables";
 @import "global/mixins";
 
-/* Для демок */
+/* Фоны */
 body {
   background: @bg-darkgrey url("../img/bb-mobile.png") no-repeat 50% 0px;
   background-size: 720px auto;
@@ -22,6 +22,8 @@ body {
   }
 }
 
+
+/* Обводки */
 body > *,
 body > * > *,
 body > * > * > *,
@@ -134,13 +136,6 @@ body > * > * > * > * > *::before {
   right: 3px;
 }
 
-@media (min-width: @tablet-widths) {
-  .nav-mock::before {
-    left: auto;
-    right: 2px;
-  }
-}
-
 .site-list::before {
   top: auto;
   bottom: 3px;
@@ -149,12 +144,6 @@ body > * > * > * > * > *::before {
 .user-list::before {
   top: auto;
   bottom: 3px;
-}
-
-@media (min-width: @tablet-widths) {
-  .user-list::before {
-    content: "...";
-  }
 }
 
 .stats__header::before,
@@ -196,6 +185,15 @@ body > * > * > * > * > *::before {
 @media (min-width: @tablet-widths) {
   .page-footer__copyright::before {
     font-size: 10px;
+  }
+
+  .user-list::before {
+    content: "...";
+  }
+
+  .nav-mock::before {
+    left: auto;
+    right: 2px;
   }
 }
 

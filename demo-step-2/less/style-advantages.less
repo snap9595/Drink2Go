@@ -7,22 +7,23 @@
 /* Настройки скриншота-подложки для сетки */
 body {
   min-height: 1050px;
-}
-
-.block-mock {
-  height: 390px;
+  background-position: 50% -850px;
 }
 
 @media (min-width: @tablet-widths) {
-  .block-mock {
-    height: 469px;
+  body {
+    background-position: 50% -685px;
   }
 }
 
 @media (min-width: @desktop-widths) {
-  .block-mock {
-    height: 720px;
+  body {
+    background-position: 50% -780px;
   }
+}
+
+.block-mock {
+  height: 100px;
 }
 
 /* Файл blocks/advantages.less */
