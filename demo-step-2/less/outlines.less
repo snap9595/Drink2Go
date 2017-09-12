@@ -2,3 +2,216 @@
 @import "global/mixins";
 
 /* Для демок */
+
+body {
+  background: @bg-darkgrey url("../img/barbershop-index-mobile-open.jpg") no-repeat 50% 0px;
+  background-size: 320px auto;
+  min-height: 750px;
+}
+
+@media (min-width: @tablet-widths) {
+  body {
+    background: @bg-darkgrey url("../img/barbershop-index-tablet.jpg") no-repeat 50% 0px;
+    background-size: 768px auto;
+  }
+}
+
+@media (min-width: @desktop-widths) {
+  body {
+    background: @bg-darkgrey url("../img/barbershop-index-desktop.jpg") no-repeat 50% 0px;
+    background-size: 1200px auto;
+  }
+}
+
+body > *,
+body > * > *,
+body > * > * > *,
+body > * > * > * > *,
+body > * > * > * > * > *  {
+  position: relative;
+}
+
+body > *::before,
+body > * > *::before,
+body > * > * > *::before,
+body > * > * > * > *::before,
+body > * > * > * > * > *::before {
+  content: "."attr(class);
+
+  position: absolute;
+  top: 2px;
+  left: 2px;
+
+  height: 24px;
+  padding: 2px 5px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Courier New", monotype;
+  white-space: nowrap;
+}
+
+
+body > * {
+  background: rgba(128, 255, 128, 0.25);
+  background-clip: content-box;
+  outline: 3px solid green;
+  outline-offset: -3px;
+}
+
+body > *::before {
+  color: white;
+  background: green;
+}
+
+
+body > * > * {
+  background: rgba(255, 45, 82, 0.2);
+  background-clip: content-box;
+  outline: 3px solid rgba(255, 45, 82, 0.9);
+  outline-offset: -3px;
+}
+
+body > * > *::before {
+  color: white;
+  background: rgb(255, 45, 82);
+}
+
+
+body > * > * > * {
+  background: rgba(173, 216, 230, 0.2);
+  background-clip: content-box;
+  outline: 3px solid rgba(173, 216, 230, 0.9);
+  outline-offset: -3px;
+}
+
+body > * > * > *::before {
+  color: black;
+  background: lightblue;
+}
+
+
+body > * > * > *  > * {
+  background: rgba(234, 255, 45, 0.2);
+  background-clip: content-box;
+  outline: 3px solid rgba(234, 255, 45, 0.9);
+  outline-offset: -3px;
+}
+
+body > * > * > * > *::before {
+  color: black;
+  background: rgb(234, 255, 45);
+}
+
+
+body > * > * > *  > * > * {
+  outline: 3px solid violet;
+  outline-offset: -3px;
+}
+
+body > * > * > * > * > *::before {
+  color: black;
+  background: violet;
+}
+
+.block-mock {
+  .no-outline();
+
+  height: 100px;
+
+  background-color: rgba(255, 255, 255, 0.25);
+  background-image:
+          linear-gradient(135deg, rgba(0, 0, 0, 0.25) 25%, transparent 25%),
+          linear-gradient(225deg, rgba(0, 0, 0, 0.25) 25%, transparent 25%),
+          linear-gradient(45deg, rgba(0, 0, 0, 0.25) 25%, transparent 25%),
+          linear-gradient(315deg, rgba(0, 0, 0, 0.25) 25%, transparent 25%);
+  background-position:
+          25px 0,
+          25px 0,
+          0 0,
+          0 0;
+  background-size: 50px 50px;
+  background-repeat: repeat;
+}
+
+
+
+.main-nav__wrapper::before {
+  left: auto;
+  right: 3px;
+}
+
+.main-nav__items::before {
+  top: auto;
+  bottom: 3px;
+}
+
+.main-nav__user-items::before {
+  top: auto;
+  bottom: 3px;
+}
+
+@media (min-width: @tablet-widths) {
+  .main-nav__user-items::before {
+    content: "...";
+  }
+}
+
+
+
+.stats__header::before,
+.stats__items::before {
+  top: auto;
+  bottom: 2px;
+}
+
+
+
+.advantages__wrapper::before {
+  left: auto;
+  right: 2px;
+}
+
+.advantages__item::before {
+  top: auto;
+  bottom: 2px;
+}
+
+
+
+.news__wrapper::before {
+  left: auto;
+  right: 2px;
+}
+
+.news__item::before {
+  top: auto;
+  bottom: 2px;
+}
+
+
+
+.reviews__wrapper::before {
+  left: auto;
+  right: 2px;
+}
+
+
+
+.page-footer__wrapper::before {
+  left: auto;
+  right: 2px;
+}
+
+@media (min-width: @tablet-widths) {
+  .page-footer__copyright::before {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: @desktop-widths) {
+  .page-footer__social::before {
+    font-size: 10px;
+  }
+}

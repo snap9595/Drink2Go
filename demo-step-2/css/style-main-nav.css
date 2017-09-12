@@ -13,3 +13,14 @@ img {
   height: auto;
 }
 /* Файл blocks/main-nav.less */
+.main-nav {
+    /* Временно для сетки */
+  min-height: 310px;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+        /* Временно для сетки */
+    min-height: 70px;
+  }
+}
