@@ -1,16 +1,15 @@
 /* Файл scaffolding.less */
-
 body {
-  font-size: 18px;
-  line-height: 27px;
   font-family: Arial, sans-serif;
-  color: #f7f4f1;
+  font-size: 18px;
   font-style: normal;
-
-  background-color: @bg-darkgrey;
+  line-height: 27px;
+  color: #f7f4f1;
+  background-color: #292929;
 }
 
 img {
   max-width: 100%;
   height: auto;
 }
+/* Файл blocks/page-header.less */
