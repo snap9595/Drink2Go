@@ -23,13 +23,9 @@ img {
 }
 
 @media (min-width: 768px) {
-  .page-header {
-    flex-direction: column-reverse;
-  }
-
   .page-header__logo {
-    width: 100%;
     height: 400px;
+    order: 1;
   }
 }
 
@@ -38,14 +34,14 @@ img {
     height: 648px;
   }
 }
-/* Файл blocks/main-nav.less не полностью, так что пока ставлю здесь просто нужную часть */
-.main-nav {
+/* Файл blocks/nav-mock */
+.nav-mock {
     /* Временно для сетки */
   min-height: 310px;
 }
 
 @media (min-width: 768px) {
-  .main-nav {
+  .nav-mock {
         /* Временно для сетки */
     min-height: 70px;
   }

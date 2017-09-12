@@ -23,13 +23,9 @@ img {
 }
 
 @media (min-width: 768px) {
-  .page-header {
-    flex-direction: column-reverse;
-  }
-
   .page-header__logo {
-    width: 100%;
     height: 400px;
+    order: 1;
   }
 }
 
