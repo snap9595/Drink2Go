@@ -91,7 +91,7 @@ img {
 
 .main-nav__list {
     /* Временно для сетки */
-  min-height: 70px;
+  min-height: 50px;
   margin: 0;
   padding: 0;
   list-style: none;

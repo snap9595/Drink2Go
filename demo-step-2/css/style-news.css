@@ -27,7 +27,7 @@ body {
 
 @media (min-width: 1200px) {
   body {
-    background-position: 50% -1205px;
+    background-position: 50% -1200px;
   }
 }
 
@@ -61,7 +61,7 @@ body {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  padding-bottom: 7px;
+  padding-bottom: 5px;
   list-style: none;
 }
 
@@ -97,7 +97,7 @@ body {
 @media (min-width: 768px) {
   .news {
     padding-top: 90px;
-    padding-bottom: 28px;
+    padding-bottom: 25px;
   }
 
   .news__wrapper {
@@ -126,7 +126,7 @@ body {
 
 @media (min-width: 1200px) {
   .news {
-    padding-top: 88px;
+    padding-top: 90px;
     padding-bottom: 32px;
   }
 
