@@ -4,6 +4,7 @@ body {
   font-size: 18px;
   font-style: normal;
   line-height: 27px;
+  min-width: 320px;
   color: #f7f4f1;
   background-color: #292929;
 }
@@ -21,13 +22,13 @@ body {
 
 @media (min-width: 768px) {
   body {
-    background-position: 50% -1600px;
+    background-position: 50% -1546px;
   }
 }
 
 @media (min-width: 1200px) {
   body {
-    background-position: 50% -1590px;
+    background-position: 50% -1537px;
   }
 }
 

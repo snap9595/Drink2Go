@@ -4,6 +4,7 @@ body {
   font-size: 18px;
   font-style: normal;
   line-height: 27px;
+  min-width: 320px;
   color: #f7f4f1;
   background-color: #292929;
 }
@@ -26,7 +27,7 @@ img {
 @media (min-width: 768px) {
   .page-header__logo {
     height: 400px;
-    order: 1;
+    order: 2;
   }
 }
 

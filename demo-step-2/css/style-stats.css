@@ -4,6 +4,7 @@ body {
   font-size: 18px;
   font-style: normal;
   line-height: 27px;
+  min-width: 320px;
   color: #f7f4f1;
   background-color: #292929;
 }

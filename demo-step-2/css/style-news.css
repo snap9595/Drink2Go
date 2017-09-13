@@ -4,6 +4,7 @@ body {
   font-size: 18px;
   font-style: normal;
   line-height: 27px;
+  min-width: 320px;
   color: #f7f4f1;
   background-color: #292929;
 }
@@ -27,7 +28,7 @@ body {
 
 @media (min-width: 1200px) {
   body {
-    background-position: 50% -1200px;
+    background-position: 50% -1171px;
   }
 }
 
@@ -61,7 +62,6 @@ body {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  padding-bottom: 5px;
   list-style: none;
 }
 
@@ -97,12 +97,12 @@ body {
 @media (min-width: 768px) {
   .news {
     padding-top: 90px;
-    padding-bottom: 25px;
+    padding-bottom: 30px;
   }
 
   .news__wrapper {
         /* Временно для сетки */
-    min-height: 270px;
+    min-height: 210px;
     padding: 0;
   }
 
@@ -122,15 +122,26 @@ body {
     padding: 0 30px;
     padding-left: 70px;
   }
+
+  .news__item:nth-child(2) {
+        /* Временно для сетки */
+    min-height: 110px;
+  }
 }
 
 @media (min-width: 1200px) {
   .news {
-    padding-top: 90px;
-    padding-bottom: 32px;
+    padding-top: 120px;
+    padding-bottom: 25px;
+  }
+
+  .news__wrapper {
+        /* Временно для сетки */
+    min-height: 220px;
   }
 
   .news__title {
+    margin-bottom: 55px;
     margin-left: 70px;
   }
 

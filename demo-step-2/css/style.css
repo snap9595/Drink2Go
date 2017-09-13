@@ -4,6 +4,7 @@ body {
   font-size: 18px;
   font-style: normal;
   line-height: 27px;
+  min-width: 320px;
   color: #f7f4f1;
   background-color: #292929;
 }
@@ -25,7 +26,7 @@ img {
 @media (min-width: 768px) {
   .page-header__logo {
     height: 400px;
-    order: 1;
+    order: 2;
   }
 }
 
@@ -249,7 +250,7 @@ img {
         /* Временно для сетки */
     min-height: 275px;
     padding-top: 75px;
-    padding-bottom: 65px;
+    padding-bottom: 40px;
   }
 
   .advantages__list {
@@ -304,7 +305,6 @@ img {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  padding-bottom: 5px;
   list-style: none;
 }
 
@@ -340,12 +340,12 @@ img {
 @media (min-width: 768px) {
   .news {
     padding-top: 90px;
-    padding-bottom: 25px;
+    padding-bottom: 30px;
   }
 
   .news__wrapper {
         /* Временно для сетки */
-    min-height: 270px;
+    min-height: 210px;
     padding: 0;
   }
 
@@ -365,15 +365,26 @@ img {
     padding: 0 30px;
     padding-left: 70px;
   }
+
+  .news__item:nth-child(2) {
+        /* Временно для сетки */
+    min-height: 110px;
+  }
 }
 
 @media (min-width: 1200px) {
   .news {
-    padding-top: 90px;
-    padding-bottom: 32px;
+    padding-top: 120px;
+    padding-bottom: 25px;
+  }
+
+  .news__wrapper {
+        /* Временно для сетки */
+    min-height: 220px;
   }
 
   .news__title {
+    margin-bottom: 55px;
     margin-left: 70px;
   }
 
