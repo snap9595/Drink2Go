@@ -13,22 +13,24 @@ img {
   max-width: 100%;
   height: auto;
 }
-/* Фоны для сеток лежат в файле outlines.less */
 /* Настройки скриншота-подложки для сетки */
 body {
   min-height: 1050px;
-  background-position: 50% -1730px;
+  background: #292929 url('../img/bb-mobile-close.png') no-repeat 50% -1445px;
+  background-size: 320px auto;
 }
 
 @media (min-width: 768px) {
   body {
-    background-position: 50% -1546px;
+    background: #292929 url('../img/bb-tablet.png') no-repeat 50% -1546px;
+    background-size: 768px auto;
   }
 }
 
 @media (min-width: 1200px) {
   body {
-    background-position: 50% -1537px;
+    background: #292929 url('../img/bb-desktop.png') no-repeat 50% -1537px;
+    background-size: 1200px auto;
   }
 }
 

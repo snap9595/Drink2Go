@@ -2,23 +2,24 @@
 @import "global/scaffolding";
 @import "global/mixins";
 
-/* Фоны для сеток лежат в файле outlines.less */
-
 /* Настройки скриншота-подложки для сетки */
 body {
+  background: @bg-darkgrey url("../img/bb-mobile-close.png") no-repeat 50% -945px;
+  background-size: 320px auto;
   min-height: 1050px;
-  background-position: 50% -1202px;
 }
 
 @media (min-width: @tablet-widths) {
   body {
-    background-position: 50% -1220px;
+    background: @bg-darkgrey url("../img/bb-tablet.png") no-repeat 50% -1220px;
+    background-size: 768px auto;
   }
 }
 
 @media (min-width: @desktop-widths) {
   body {
-    background-position: 50% -1171px;
+    background: @bg-darkgrey url("../img/bb-desktop.png") no-repeat 50% -1171px;
+    background-size: 1200px auto;
   }
 }
 

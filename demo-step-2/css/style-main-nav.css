@@ -13,7 +13,26 @@ img {
   max-width: 100%;
   height: auto;
 }
-/* Фоны для сеток лежат в файле outlines.less */
+/* Фоны */
+body {
+  min-height: 750px;
+  background: #292929 url('../img/bb-mobile.png') no-repeat 50% 0;
+  background-size: 720px auto;
+}
+
+@media (min-width: 768px) {
+  body {
+    background: #292929 url('../img/bb-tablet.png') no-repeat 50% 0;
+    background-size: 768px auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background: #292929 url('../img/bb-desktop.png') no-repeat 50% 0;
+    background-size: 1200px auto;
+  }
+}
 /* Файл blocks/page-header.less */
 .page-header {
   display: flex;

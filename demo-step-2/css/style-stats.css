@@ -13,12 +13,27 @@ img {
   max-width: 100%;
   height: auto;
 }
-/* Фоны для сеток лежат в файле outlines.less */
-/* Настройки скриншота-подложки для сетки */
+/* Фоны */
 body {
   min-height: 1050px;
+  background: #292929 url('../img/bb-mobile.png') no-repeat 50% 0;
+  background-size: 720px auto;
 }
 
+@media (min-width: 768px) {
+  body {
+    background: #292929 url('../img/bb-tablet.png') no-repeat 50% 0;
+    background-size: 768px auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background: #292929 url('../img/bb-desktop.png') no-repeat 50% 0;
+    background-size: 1200px auto;
+  }
+}
+/* Настройки для block-mock */
 .block-mock {
   height: 390px;
 }
@@ -38,6 +53,7 @@ body {
 .stats {
   width: 320px;
   margin: 0 auto;
+  padding-bottom: 60px;
 }
 
 @media (min-width: 768px) {
@@ -70,6 +86,7 @@ body {
 @media (min-width: 768px) {
   .stats {
     margin-top: -184px;
+    padding-bottom: 0;
   }
 
   .stats__header {
@@ -87,6 +104,7 @@ body {
   .stats {
     display: flex;
     margin-top: -159px;
+    padding-bottom: 0;
   }
 
   .stats__header {

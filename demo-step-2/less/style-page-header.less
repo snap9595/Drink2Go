@@ -2,7 +2,26 @@
 @import "global/scaffolding";
 @import "global/mixins";
 
-/* Фоны для сеток лежат в файле outlines.less */
+/* Фоны */
+body {
+  background: @bg-darkgrey url("../img/bb-mobile.png") no-repeat 50% 0px;
+  background-size: 720px auto;
+  min-height: 750px;
+}
+
+@media (min-width: @tablet-widths) {
+  body {
+    background: @bg-darkgrey url("../img/bb-tablet.png") no-repeat 50% 0px;
+    background-size: 768px auto;
+  }
+}
+
+@media (min-width: @desktop-widths) {
+  body {
+    background: @bg-darkgrey url("../img/bb-desktop.png") no-repeat 50% 0px;
+    background-size: 1200px auto;
+  }
+}
 
 /* Стили для nav-mock */
 .nav-mock {
