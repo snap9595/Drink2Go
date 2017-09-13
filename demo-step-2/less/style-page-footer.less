@@ -1,0 +1,30 @@
+@import "global/variables";
+@import "global/scaffolding";
+@import "global/mixins";
+
+/* Фоны для сеток лежат в файле outlines.less */
+
+/* Настройки скриншота-подложки для сетки */
+body {
+  min-height: 1050px;
+  background-position: 50% -2020px;
+}
+
+@media (min-width: @tablet-widths) {
+  body {
+    background-position: 50% -1955px;
+  }
+}
+
+@media (min-width: @desktop-widths) {
+  body {
+    background-position: 50% -1970px;
+  }
+}
+
+.block-mock {
+  height: 100px;
+}
+
+/* Файл blocks/page-footer.less */
+@import "blocks/page-footer";
