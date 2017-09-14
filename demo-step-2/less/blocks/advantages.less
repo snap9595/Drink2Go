@@ -2,8 +2,8 @@
   .container();
 
   /* Временно для сетки */
-  min-height: 320px;
-  padding-top: 30px;
+  min-height: 325px;
+  padding-top: 25px;
 }
 
 .advantages__list {
@@ -18,7 +18,7 @@
   padding-top: 125px;
 
   /* Временно для сетки */
-  min-height: 145px;
+  min-height: 150px;
 
   &:nth-child(n+2) {
     display: none;
@@ -68,6 +68,7 @@
 
   .advantages__list {
     flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
 
     /* Временно для сетки (height – так как таблица не воспринимает min-height) */
@@ -75,15 +76,10 @@
   }
 
   .advantages__item {
-    display: table-cell;
     width: 240px;
     margin: 0;
     padding: 0 40px;
     padding-top: 130px;
-
-    &:nth-child(n+2) {
-      display: table-cell;
-    }
 
     &:nth-child(2) {
       width: 200px;
