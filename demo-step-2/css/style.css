@@ -339,12 +339,12 @@ img {
 @media (min-width: 768px) {
   .news {
     padding-top: 90px;
-    padding-bottom: 30px;
+    padding-bottom: 35px;
   }
 
   .news__wrapper {
         /* Временно для сетки */
-    min-height: 210px;
+    min-height: 200px;
     padding: 0;
   }
 
@@ -356,6 +356,7 @@ img {
 
   .news__list {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .news__item {
@@ -374,12 +375,12 @@ img {
 @media (min-width: 1200px) {
   .news {
     padding-top: 120px;
-    padding-bottom: 25px;
+    padding-bottom: 40px;
   }
 
   .news__wrapper {
         /* Временно для сетки */
-    min-height: 220px;
+    min-height: 205px;
   }
 
   .news__title {
