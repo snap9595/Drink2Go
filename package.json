@@ -1,0 +1,37 @@
+{
+  "name": "intensive-adaptive-barbershop-new",
+  "version": "1.0.0",
+  "description": "## Как предложить изменения",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htmlacademy/intensive-adaptive-barbershop-new.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/htmlacademy/intensive-adaptive-barbershop-new/issues"
+  },
+  "homepage": "https://github.com/htmlacademy/intensive-adaptive-barbershop-new#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssbeautify": "^0.1.3",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-less": "^3.3.2",
+    "stylelint": "8.1.x",
+    "stylelint-config-htmlacademy": "0.1.x"
+  },
+  "editorconfig-cli": [
+    "*.html",
+    "*.json",
+    "*.js",
+    "js/**/*.js",
+    "img/**/*.svg",
+    "sass/**/*.{sass,scss}"
+  ],
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "test": "npm run stylelint",
+    "stylelint": "stylelint '**/*.less' --syntax less"
+  }
+}
