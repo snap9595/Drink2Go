@@ -1,6 +1,22 @@
 /* Файл scaffolding.less */
+@font-face {
+  font-family: 'PT Sans Narrow';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('fonts/PTSansNarrow.woff2') format('woff2'), url('fonts/PTSansNarrow.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'PT Sans Narrow';
+    font-weight: 700;
+    font-style: normal;
+
+    src: url('fonts/PTSansNarrowBold.woff2') format('woff2'), url('fonts/PTSansNarrowBold.woff') format('woff');
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   font-size: 18px;
   font-style: normal;
   line-height: 27px;
@@ -13,25 +29,12 @@ img {
   max-width: 100%;
   height: auto;
 }
-/* Фоны */
-body {
-  min-height: 1050px;
-  background: #292929 url('../img/bb-mobile.png') no-repeat 50% 0;
-  background-size: 720px auto;
-}
 
-@media (min-width: 768px) {
-  body {
-    background: #292929 url('../img/bb-tablet.png') no-repeat 50% 0;
-    background-size: 1178px auto;
-  }
-}
-
-@media (min-width: 1200px) {
-  body {
-    background: #292929 url('../img/bb-desktop.png') no-repeat 50% 0;
-    background-size: 1391px auto;
-  }
+.visually-hidden {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
 }
 /* Настройки для block-mock */
 .block-mock {

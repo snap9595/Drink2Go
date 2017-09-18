@@ -2,27 +2,6 @@
 @import "global/scaffolding";
 @import "global/mixins";
 
-/* Настройки скриншота-подложки для сетки */
-body {
-  background: @bg-darkgrey url("../img/bb-mobile.png") no-repeat 50% -851px;
-  background-size: 720px auto;
-  min-height: 1050px;
-}
-
-@media (min-width: @tablet-width) {
-  body {
-    background: @bg-darkgrey url("../img/bb-tablet.png") no-repeat 50% -685px;
-    background-size: 1178px auto;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  body {
-    background: @bg-darkgrey url("../img/bb-desktop.png") no-repeat 50% -780px;
-    background-size: 1391px auto;
-  }
-}
-
 .block-mock {
   height: 100px;
 }

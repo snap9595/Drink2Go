@@ -2,27 +2,6 @@
 @import "global/scaffolding";
 @import "global/mixins";
 
-/* Фоны */
-body {
-  background: @bg-darkgrey url("../img/bb-mobile.png") no-repeat 50% 0;
-  background-size: 720px auto;
-  min-height: 750px;
-}
-
-@media (min-width: @tablet-width) {
-  body {
-    background: @bg-darkgrey url("../img/bb-tablet.png") no-repeat 50% 0;
-    background-size: 1178px auto;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  body {
-    background: @bg-darkgrey url("../img/bb-desktop.png") no-repeat 50% 0;
-    background-size: 1391px auto;
-  }
-}
-
 /* Стили для nav-mock */
 .nav-mock {
   /* Временно для сетки */
@@ -35,6 +14,12 @@ body {
     min-height: 70px;
   }
 }
+
+/*  Блок-заглушка снизу */
+.block-mock:nth-last-of-type(1) {
+  .mock(400px);
+}
+
 
 /* Файл blocks/page-header.less */
 @import "blocks/page-header";
