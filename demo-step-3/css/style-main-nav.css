@@ -1,0 +1,144 @@
+/* Файл scaffolding.less */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 27px;
+  min-width: 320px;
+  color: #f7f4f1;
+  background-color: #292929;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Фоны */
+body {
+  min-height: 750px;
+  background: #292929 url('../img/bb-mobile.png') no-repeat 50% 0;
+  background-size: 720px auto;
+}
+
+@media (min-width: 768px) {
+  body {
+    background: #292929 url('../img/bb-tablet.png') no-repeat 50% 0;
+    background-size: 1178px auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background: #292929 url('../img/bb-desktop.png') no-repeat 50% 0;
+    background-size: 1391px auto;
+  }
+}
+/* Файл blocks/page-header.less */
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__logo {
+  height: 85px;
+}
+
+@media (min-width: 768px) {
+  .page-header__logo {
+    height: 400px;
+    order: 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-header__logo {
+    height: 648px;
+  }
+}
+/* Стили для nav-mock в начале демки есть - потом удаляются */
+/*.nav-mock {
+  !* Временно для сетки *!
+  min-height: 310px;
+}
+
+@media (min-width: @tablet-width) {
+  .nav-mock {
+    !* Временно для сетки *!
+    min-height: 70px;
+  }
+}*/
+/* Заглушка и затемнение шапки */
+.page-header,
+.page-header__logo {
+  outline: none;
+  background: transparent;
+}
+
+.page-header::before,
+.page-header__logo::before {
+  display: none;
+}
+
+.page-header__logo {
+  background: rgba(255, 255, 255, .5);
+}
+/* Файл blocks/main-nav.less */
+.main-nav {
+  width: 320px;
+    /* Временно для сетки */
+  min-height: 310px;
+  margin: 0 auto;
+}
+
+.main-nav__list {
+    /* Временно для сетки */
+  min-height: 50px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-list {
+    /* Временно для сетки */
+  min-height: 255px;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    width: auto;
+        /* Временно для сетки */
+    min-height: 70px;
+    margin: 0;
+  }
+
+  .main-nav__wrapper {
+    display: flex;
+    width: 640px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .site-list {
+    width: 570px;
+        /* Временно для сетки */
+    min-height: 70px;
+  }
+
+  .user-list {
+    width: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-nav__wrapper {
+    width: 960px;
+  }
+
+  .site-list {
+    width: 780px;
+  }
+
+  .user-list {
+    width: 160px;
+  }
+}

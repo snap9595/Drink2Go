@@ -1,0 +1,69 @@
+/* Файл scaffolding.less */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 27px;
+  min-width: 320px;
+  color: #f7f4f1;
+  background-color: #292929;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Фоны */
+body {
+  min-height: 750px;
+  background: #292929 url('../img/bb-mobile.png') no-repeat 50% 0;
+  background-size: 720px auto;
+}
+
+@media (min-width: 768px) {
+  body {
+    background: #292929 url('../img/bb-tablet.png') no-repeat 50% 0;
+    background-size: 1178px auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background: #292929 url('../img/bb-desktop.png') no-repeat 50% 0;
+    background-size: 1391px auto;
+  }
+}
+/* Стили для nav-mock */
+.nav-mock {
+    /* Временно для сетки */
+  min-height: 310px;
+}
+
+@media (min-width: 768px) {
+  .nav-mock {
+        /* Временно для сетки */
+    min-height: 70px;
+  }
+}
+/* Файл blocks/page-header.less */
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__logo {
+  height: 85px;
+}
+
+@media (min-width: 768px) {
+  .page-header__logo {
+    height: 400px;
+    order: 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-header__logo {
+    height: 648px;
+  }
+}

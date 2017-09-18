@@ -1,0 +1,112 @@
+/* Файл scaffolding.less */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 27px;
+  min-width: 320px;
+  color: #f7f4f1;
+  background-color: #292929;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Фоны */
+body {
+  min-height: 1050px;
+  background: #292929 url('../img/bb-mobile.png') no-repeat 50% 0;
+  background-size: 720px auto;
+}
+
+@media (min-width: 768px) {
+  body {
+    background: #292929 url('../img/bb-tablet.png') no-repeat 50% 0;
+    background-size: 1178px auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background: #292929 url('../img/bb-desktop.png') no-repeat 50% 0;
+    background-size: 1391px auto;
+  }
+}
+/* Настройки для block-mock */
+.block-mock {
+  height: 390px;
+}
+
+@media (min-width: 768px) {
+  .block-mock {
+    height: 469px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .block-mock {
+    height: 720px;
+  }
+}
+/* Файл blocks/stats.less */
+.stats {
+  width: 320px;
+    /* Временно для сетки */
+  min-height: 570px;
+  margin: 0 auto;
+}
+
+.stats__header {
+    /* Временно для сетки */
+  min-height: 130px;
+  padding-top: 27px;
+  padding-right: 38px;
+  padding-bottom: 26px;
+  padding-left: 38px;
+}
+
+.stats__list {
+  width: 100%;
+    /* Временно для сетки (таблица на min-height не реагирует, поэтому height) */
+  height: 320px;
+}
+
+@media (min-width: 768px) {
+  .stats {
+    width: 640px;
+        /* Временно для сетки */
+    min-height: 0;
+    margin-top: -185px;
+  }
+
+  .stats__header {
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+
+  .stats__list {
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  .stats {
+    display: flex;
+    width: 960px;
+    margin-top: -160px;
+  }
+
+  .stats__header {
+    width: 240px;
+        /* Временно для сетки */
+    min-height: 263px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .stats__list {
+    width: 640px;
+  }
+}

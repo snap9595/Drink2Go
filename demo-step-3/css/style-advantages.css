@@ -1,0 +1,128 @@
+/* Файл scaffolding.less */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 27px;
+  min-width: 320px;
+  color: #f7f4f1;
+  background-color: #292929;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Настройки скриншота-подложки для сетки */
+body {
+  min-height: 1050px;
+  background: #292929 url('../img/bb-mobile.png') no-repeat 50% -851px;
+  background-size: 720px auto;
+}
+
+@media (min-width: 768px) {
+  body {
+    background: #292929 url('../img/bb-tablet.png') no-repeat 50% -685px;
+    background-size: 1178px auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background: #292929 url('../img/bb-desktop.png') no-repeat 50% -780px;
+    background-size: 1391px auto;
+  }
+}
+
+.block-mock {
+  height: 100px;
+}
+/* Файл blocks/advantages.less */
+.advantages__wrapper {
+  width: 320px;
+    /* Временно для сетки */
+  min-height: 325px;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages__item {
+    /* Временно для сетки */
+  min-height: 150px;
+  margin-bottom: 23px;
+  padding: 0 44px;
+  padding-top: 125px;
+}
+
+.advantages__item:nth-child(n+2) {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .advantages__wrapper {
+    width: 640px;
+    padding-top: 42px;
+    padding-bottom: 10px;
+  }
+
+  .advantages__list {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4px;
+  }
+
+  .advantages__item {
+        /* Временно для сетки */
+    min-height: 95px;
+    margin: 0 30px;
+    margin-bottom: 40px;
+    padding: 0;
+    padding-bottom: 40px;
+    padding-left: 128px;
+  }
+
+  .advantages__item:nth-child(n+2) {
+    display: block;
+  }
+
+  .advantages__item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .advantages__wrapper {
+    width: 960px;
+        /* Временно для сетки */
+    min-height: 275px;
+    padding-top: 75px;
+    padding-bottom: 40px;
+  }
+
+  .advantages__list {
+    flex-direction: row;
+    width: 100%;
+        /* Временно для сетки (height – так как таблица не воспринимает min-height) */
+    height: 275px;
+    flex-wrap: wrap;
+  }
+
+  .advantages__item {
+    width: 240px;
+    margin: 0;
+    padding: 0 40px;
+    padding-top: 130px;
+  }
+
+  .advantages__item:nth-child(2) {
+    width: 200px;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
