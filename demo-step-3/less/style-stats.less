@@ -4,18 +4,29 @@
 
 /* Настройки для block-mock */
 .block-mock {
-  height: 390px;
+  .no-outline();
+
+  height: 50px;
+
+  background-color: rgba(255, 255, 255, 0.25);
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.25) 25%, transparent 25%), linear-gradient(225deg, rgba(0, 0, 0, 0.25) 25%, transparent 25%), linear-gradient(45deg, rgba(0, 0, 0, 0.25) 25%, transparent 25%), linear-gradient(315deg, rgba(0, 0, 0, 0.25) 25%, transparent 25%);
+  background-position: 25px 0, 25px 0, 0 0, 0 0;
+  background-size: 50px 50px;
+  background-repeat: repeat;
+}
+
+.block-mock:nth-last-of-type(1) {
+  height: 400px;
 }
 
 @media (min-width: @tablet-width) {
-  .block-mock {
-    height: 469px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .block-mock {
-    height: 720px;
+  .block-mock:nth-of-type(1) {
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 25%, transparent 25%), linear-gradient(225deg, rgba(0, 0, 0, 0.5) 25%, transparent 25%), linear-gradient(45deg, rgba(0, 0, 0, 0.5) 25%, transparent 25%), linear-gradient(315deg, rgba(0, 0, 0, 0.5) 25%, transparent 25%);
+    background-position: 25px 0, 25px 0, 0 0, 0 0;
+    background-size: 50px 50px;
+    background-repeat: repeat;
   }
 }
 
