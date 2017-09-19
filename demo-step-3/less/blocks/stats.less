@@ -3,19 +3,19 @@
   margin: 0 auto;
 
   /* Временно для сетки */
-  min-height: 570px;
+  /*min-height: 560px;*/
 }
 
 .stats__header {
   padding-top: 27px;
   padding-right: 38px;
   padding-bottom: 26px;
-  padding-left: 38px;
+  padding-left: 34px;
   background-color: #ffffff;
   color: #000000;
 
   /* Временно для сетки */
-  min-height: 130px;
+  /*min-height: 130px;*/
 }
 
 .stats__slogan {
@@ -117,12 +117,13 @@
     margin-top: -185px;
 
     /* Временно для сетки */
-    min-height: 0;
+    /*min-height: 0;*/
   }
 
   .stats__header {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     min-height: 129px;
     padding: 0;
@@ -141,30 +142,32 @@
   }
 
   .stats__slogan {
-    width: 255px;
-    padding-left: 40px;
-    margin-bottom: 20px;
     font-size: 40px;
     line-height: 40px;
+    width: 280px;
+    margin-bottom: 18px;
+    padding-left: 41px;
     text-align: left;
     text-transform: none;
+    box-sizing: border-box;
   }
 
   .stats__intro {
-    width: 210px;
+    width: 50%;
     padding: 0;
-    padding-top: 4px;
+    padding-top: 5px;
     padding-right: 80px;
-
+    padding-left: 33px;
     text-align: left;
+    box-sizing: border-box;
   }
 
   .stats__legend--top {
-    position: absolute;
+    position: relative;
     left: 0;
-    bottom: 30px;
+    bottom: 0;
     display: block;
-    width: 280px;
+    width: calc(100% - 40%);
     padding-left: 40px;
     color: rgba(0, 0, 0, 0.3);
   }
@@ -179,7 +182,6 @@
   }
 
   .stats__list tr {
-    display: block;
     width: 250px;
     padding: 25px 35px;
     padding-bottom: 28px;
@@ -236,15 +238,14 @@
   }
 
   .stats__intro {
-    width: auto;
+    width: 213px;
     margin-bottom: 32px;
     padding: 0;
   }
 
   .stats__legend--top {
-    position: relative;
-    bottom: 0;
-    padding-left: 0;
+    width: 100%;
+    padding: 0;
   }
 
   .stats__list {
