@@ -11,16 +11,18 @@
   line-height: 18px;
   color: #ffffff;
   text-decoration: none;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 17px;
-    left: 21px;
-    width: 16px;
-    height: 16px;
-    background-color: red; /* Жду свг от кураторов */
-    opacity: 0.3;
+.user-list__login-icon {
+  position: absolute;
+  top: 17px;
+  left: 21px;
+  width: 16px;
+  height: 16px;
+  opacity: 0.3;
+
+  polygon {
+    fill: #ffffff;
   }
 }
 
@@ -36,20 +38,26 @@
     padding: 0;
     font-size: 0;
 
-    &::before {
-      top: 29px;
-      left: 12px;
-    }
-
-    &:hover::before {
-      background-position: -10px -46px;
+    &:hover .user-list__login-icon {
       opacity: 1;
+
+      polygon {
+        fill: #826550;
+      }
     }
 
-    &:active::before {
-      background-position: -10px -82px;
+    &:active .user-list__login-icon {
       opacity: 0.3;
+
+      polygon {
+        fill: #ffffff;
+      }
     }
+  }
+
+  .user-list__login-icon {
+    top: 29px;
+    left: 12px;
   }
 }
 
@@ -74,10 +82,6 @@
     text-transform: uppercase;
     text-decoration: none;
 
-    &:before {
-      left: 15px;
-    }
-
     &:hover {
       color: #000000;
       background-color: #ffffff;
@@ -88,13 +92,20 @@
       background-color: #ffffff;
     }
 
-    &:hover::before {
-      background-position: -10px -10px;
+    &:hover .user-list__login-icon {
+      opacity: 0.3;
+
+      polygon {
+        fill: #000000;
+      }
     }
 
-    &:active::before {
-      background-position: -10px -10px;
+    &:active .user-list__login-icon {
       opacity: 0.1;
     }
+  }
+
+  .user-list__login-icon {
+    left: 15px;
   }
 }
