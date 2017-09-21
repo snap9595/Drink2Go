@@ -1,8 +1,10 @@
 .main-nav {
   position: relative;
+
   width: 320px;
   min-height: 51px;
   margin: 0 auto;
+
   background-color: #826550;
 }
 
@@ -11,11 +13,15 @@
   top: 0;
   right: 0;
   z-index: 2;
+
   display: block;
   width: 70px;
   height: 50px;
+
   font-size: 0;
+
   background-color: #6a4d38;
+
   cursor: pointer;
   border: none;
 
@@ -30,11 +36,14 @@
 
 .main-nav--closed .main-nav__toggle::before {
   content: "";
+
   position: absolute;
   top: 15px;
   left: 17px;
+
   width: 36px;
   height: 2px;
+
   background-color: #ffffff;
   box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
 }
@@ -52,11 +61,14 @@
   &::before,
   &::after {
     content: "";
+
     position: absolute;
     top: 24px;
     left: 18px;
+
     width: 36px;
     height: 2px;
+
     background-color: #ffffff;
   }
 
@@ -78,6 +90,7 @@
 .main-nav__list {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
@@ -94,6 +107,7 @@
   .main-nav--closed .site-list__item--active a {
     padding-right: 70px;
     padding-left: 70px;
+
     text-align: center;
   }
 
@@ -107,18 +121,23 @@
     right: 0;
     left: 70px;
     z-index: 10;
+
     height: 80vh;
+
     background-color: #6a4d38;
   }
 
   .main-nav--opened .main-nav__wrapper::before {
     content: "";
+
     position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
+
     width: 7px;
     height: 100%;
+
     box-shadow: inset 4px 0 7px -2px rgba(0, 0, 0, 0.4);
   }
 
@@ -138,11 +157,13 @@
   .main-nav--nojs .site-list__item--active a {
     padding-right: 21px;
     padding-left: 21px;
+
     text-align: left;
   }
 
   .main-nav--nojs .user-list__item {
     display: block;
+
     background-color: #6a4d38;
   }
 }
@@ -152,6 +173,7 @@
   .main-nav {
     width: auto;
     margin: 0;
+
     background-color: black;
 
     /* Временно для сетки */
@@ -161,7 +183,9 @@
   .main-nav__wrapper {
     display: flex;
     justify-content: space-between;
+
     width: 640px;
+
     margin: 0 auto;
   }
 
