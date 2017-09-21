@@ -24,10 +24,10 @@ body > * > * > * > * > *::before {
   height: 24px;
   padding: 2px 5px;
 
+  font-family: "Courier New", monospace;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
-  font-family: "Courier New", monospace;
   white-space: nowrap;
 }
 
@@ -40,6 +40,7 @@ body > * {
 
 body > *::before {
   color: white;
+
   background: green;
 }
 
@@ -52,6 +53,7 @@ body > * > * {
 
 body > * > *::before {
   color: white;
+
   background: rgb(255, 45, 82);
 }
 
@@ -64,6 +66,7 @@ body > * > * > * {
 
 body > * > * > *::before {
   color: #000000;
+
   background: lightblue;
 }
 
@@ -76,6 +79,7 @@ body > * > * > * > * {
 
 body > * > * > * > *::before {
   color: #000000;
+
   background: rgb(234, 255, 45);
 }
 
@@ -86,6 +90,7 @@ body > * > * > * > * > * {
 
 body > * > * > * > * > *::before {
   color: #000000;
+
   background: violet;
 }
 
@@ -152,6 +157,7 @@ body > * > * > * > * > *::before {
   right: 2px;
 }
 
+
 @media (min-width: @tablet-width) {
   .page-footer__copyright::before {
     font-size: 10px;
@@ -166,6 +172,7 @@ body > * > * > * > * > *::before {
     right: 2px;
   }
 }
+
 
 @media (min-width: @desktop-width) {
   .page-footer__social::before {
