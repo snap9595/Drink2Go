@@ -134,8 +134,12 @@
   background-image: url("../img/mustache-icon.svg");
 }
 
+.works-item__parameter-item:last-child {
+  margin-right: 0;
+}
 
-@media (min-width: 768px) {
+
+@media (min-width: @tablet-width) {
   .works-item {
     display: flex;
     align-items: stretch;
@@ -206,11 +210,7 @@
 }
 
 
-@media (min-width: 1200px) {
-  .works-item {
-    margin-bottom: 41px;
-  }
-
+@media (min-width: @desktop-width) {
   .works-item:first-child .works-item__image-wrapper {
     width: 480px;
   }
@@ -225,14 +225,14 @@
   }
 
   .works-item--work-of-month::before {
-    top: 25px;
+    top: 26px;
     right: 0;
     bottom: auto;
     left: auto;
   }
 
   .works-item--work-of-month::after {
-    top: 25px;
+    top: 26px;
     right: 160px;
     bottom: auto;
     left: auto;
@@ -243,7 +243,7 @@
   .works-item:not(:first-child) {
     flex-direction: column;
 
-    width: 293px;
+    width: 295px;
   }
 
   .works-item:nth-child(3n + 1) {
@@ -271,9 +271,13 @@
     margin-bottom: 25px;
   }
 
+  .works-item--work-of-month .works-item__text {
+    padding-right: 85px;
+  }
+
   .works-item__parameter-item {
     width: auto;
-    margin-right: 30px;
+    margin-right: 35px;
     margin-bottom: 21px;
   }
 }
