@@ -3,6 +3,8 @@
 }
 
 .site-list a {
+  position: relative;
+
   display: block;
   padding: 12px 21px;
   padding-bottom: 13px;
@@ -31,6 +33,20 @@
   }
 }
 
+.site-list__icon-comb {
+  position: absolute;
+  top: 15px;
+  left: auto;
+  right: 15px;
+
+  width: 16px;
+  height: 16px;
+
+  opacity: 0.3;
+
+  fill: #ffffff;
+}
+
 
 @media (min-width: @tablet-width) {
   .site-list {
@@ -39,9 +55,6 @@
     justify-content: flex-start;
 
     width: 570px;
-
-    /* Временно для сетки */
-    /*min-height: 70px;*/
   }
 
   .site-list__item {
@@ -78,6 +91,13 @@
     border: none;
   }
 
+  .site-list__icon-comb {
+    top: 8px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
   .site-list__item a[href] {
     &:hover {
       color: #826550;
@@ -85,11 +105,23 @@
       background-color: #000000;
     }
 
+    &:hover .site-list__icon-comb {
+      opacity: 1;
+
+      fill: #826550;
+    }
+
     &:active {
       color: #ffffff;
 
       background-color: #000000;
       opacity: 0.3;
+    }
+
+    &:active .site-list__icon-comb {
+      opacity: 0.3;
+
+      fill: #ffffff;
     }
   }
 }
@@ -114,6 +146,12 @@
     padding-left: 31px;
   }
 
+  .site-list__icon-comb {
+    top: 28px;
+    left: 8px;
+    transform: none;
+  }
+
   .site-list__item a[href] {
     &:hover {
       color: #000000;
@@ -126,6 +164,16 @@
 
       background-color: #ffffff;
       opacity: 1;
+    }
+
+    &:hover .site-list__icon-comb {
+      opacity: 0.3;
+
+      fill: #000000;
+    }
+
+    &:active .site-list__icon-comb {
+      opacity: 0.1;
     }
   }
 }
