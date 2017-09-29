@@ -1,6 +1,5 @@
 .stats {
-  width: 320px;
-  margin: 0 auto;
+  width: auto;
 }
 
 .stats__header {
@@ -117,7 +116,9 @@
 
 @media (min-width: @tablet-width) {
   .stats {
-    width: 640px;
+    width: 84%;
+    max-width: 960px;
+    margin: 0 auto;
     margin-top: -185px;
   }
 
@@ -127,6 +128,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    /* Временно для резиновой сетки */
+    outline: 2px solid red;
 
     &::before {
       content: "";
@@ -142,28 +146,42 @@
   }
 
   .stats__slogan {
-    width: 240px;
+    width: 50%;
     margin-bottom: 18px;
 
     font-size: 40px;
     line-height: 40px;
     text-align: left;
     text-transform: none;
+
+    /* Временно для резиновой сетки */
+    outline: 2px solid green;
+    outline-offset: -5px;
   }
 
   .stats__intro {
-    width: 210px;
-    margin-top: 5px;
-    padding-right: 47px;
+    width: 37.5%;
+    margin-top: 4px;
+    padding: 0;
+    padding-left: 30px;
 
     text-align: left;
+
+    /* Временно для резиновой сетки */
+    outline: 2px solid green;
+    outline-offset: -5px;
   }
 
   .stats__legend--top {
     display: block;
-    width: 240px;
+    width: 50%;
+    /* width: 240px; */
 
     color: rgba(0, 0, 0, 0.3);
+
+    /* Временно для резиновой сетки */
+    outline: 2px solid green;
+    outline-offset: -5px;
   }
 
   .stats__legend--bottom {
@@ -176,9 +194,11 @@
   }
 
   .stats__list tr {
-    width: 250px;
+    width: 50%;
     padding: 25px 35px;
     padding-bottom: 28px;
+
+    box-sizing: border-box;
   }
 
   .stats__list td {
@@ -215,7 +235,8 @@
   }
 
   .stats__header {
-    display: block;
+    flex-direction: column;
+
     width: 240px;
 
     &::before {
@@ -230,16 +251,18 @@
 
   .stats__intro {
     width: auto;
-    margin-bottom: 32px;
+    padding-left: 0;
     padding-right: 30px;
   }
 
   .stats__legend--top {
     width: auto;
+    margin-top: auto;
   }
 
   .stats__list {
     display: flex;
+
     width: 640px;
   }
 }
