@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Барбершоп «Бородинский»</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style-reviews.css">
+</head>
+<body>
+
+img с jpeg в picture c webp + jpeg
+
+<div class="block-mock"></div>
+
+<section class="reviews">
+  <div class="reviews__wrapper slider">
+    <div class="reviews__container">
+      <h2 class="reviews__title">Отзывы о нас</h2>
+      <a class="reviews__write button" href="#">Оставить свой</a>
+    </div>
+    <div class="reviews__list slider__list">
+      <blockquote class="reviews__item slider__item">
+        <p class="reviews__author-picture">
+          <picture>
+            <source type="image/webp" srcset="img/picture-travis.webp 1x, img/picture-travis@2x.webp 2x">
+            <img class="reviews__author-image" src="img/picture-travis.jpg" srcset="img/picture-travis@2x.jpg 2x" width="250" height="166" alt="Фото Трэвиса Баркера">
+          </picture>
+        </p>
+        <div class="reviews__content">
+          <cite class="reviews__author-name">Трэвис Баркер</cite>
+          <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+        </div>
+      </blockquote>
+    </div>
+      <button class="reviews__prev" type="button">Предыдущий отзыв</button>
+      <button class="reviews__next" type="button">Следующий отзыв</button>
+    <p class="reviews__toggles slider__toggles">
+      <button class="reviews__toggle reviews__toggle-active slider__toggle" type="button"><span class="visually-hidden">1</span></button>
+      <button class="reviews__toggle slider__toggle" type="button"><span class="visually-hidden">2</span></button>
+      <button class="reviews__toggle slider__toggle" type="button"><span class="visually-hidden">3</span></button>
+    </p>
+  </div>
+</section>
+
+<div class="block-mock"></div>
+
+</body>
+</html>
