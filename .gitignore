@@ -8,8 +8,4 @@ bower_components
 additional/video
 examples-interface-tutors.html
 examples-interface.html
-/demo-step-2/css
-/demo-step-3/css
-/demo-step-4/css
-/demo-step-5/css
-/demo-step-6/css
+/css
