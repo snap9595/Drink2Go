@@ -572,9 +572,9 @@ img {
 }
 
 .stats__header {
-  padding-top: 30px;
+  padding-top: 27px;
   padding-right: 40px;
-  padding-bottom: 25px;
+  padding-bottom: 27px;
   padding-left: 40px;
   color: #000000;
   background-color: #ffffff;
@@ -681,6 +681,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 37px;
   }
 
   .stats__header::before {
@@ -694,7 +695,7 @@ img {
   }
 
   .stats__slogan {
-    width: 50%;
+    width: 45%;
     margin-bottom: 18px;
     font-size: 40px;
     line-height: 40px;
@@ -793,9 +794,35 @@ img {
   }
 }
 /* Файл blocks/advantages.less */
+.advantages {
+  position: relative;
+}
+
+.advantages::before,
+.advantages::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 50%;
+  height: 34px;
+}
+
+.advantages::before {
+  left: 0;
+  background-image: linear-gradient(to right top, #f8f5f2 0%, #f8f5f2 50%, transparent 50%);
+}
+
+.advantages::after {
+  right: 0;
+  background-image: linear-gradient(to left top, #f8f5f2 0%, #f8f5f2 50%, transparent 50%);
+}
+
 .advantages__wrapper {
   width: 320px;
   margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 61px;
 }
 
 .advantages__list {
@@ -805,6 +832,7 @@ img {
 }
 
 .advantages__item {
+  position: relative;
   margin-bottom: 23px;
   padding: 0 44px;
   padding-top: 125px;
@@ -814,17 +842,74 @@ img {
   display: none;
 }
 
+.advantages__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 95px;
+  height: 95px;
+  margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.advantages__item--fast::before {
+  background-image: url("../img/advantage-1.svg");
+}
+
+.advantages__item--cool::before {
+  background-image: url("../img/advantage-2.svg");
+}
+
+.advantages__item--price::before {
+  background-image: url("../img/advantage-3.svg");
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.advantages__description {
+  margin: 0;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+}
+
+.advantages__toggles {
+  position: absolute;
+  bottom: 48px;
+  left: 0;
+  right: 0;
+  display: flex;
+  width: 76px;
+  margin: 0 auto;
+}
+
 @media (min-width: 768px) {
+  .advantages::before,
+  .advantages::after {
+    height: 40px;
+  }
+
   .advantages__wrapper {
     width: 640px;
     padding-top: 42px;
-    padding-bottom: 10px;
+    padding-bottom: 46px;
   }
 
   .advantages__list {
     display: flex;
     flex-direction: column;
-    padding-bottom: 4px;
   }
 
   .advantages__item {
@@ -842,13 +927,34 @@ img {
   .advantages__item:last-child {
     margin-bottom: 0;
   }
+
+  .advantages__item::before {
+    right: auto;
+  }
+
+  .advantages__title {
+    text-align: left;
+  }
+
+  .advantages__description {
+    text-align: left;
+  }
+
+  .advantages__toggles {
+    display: none;
+  }
 }
 
 @media (min-width: 1200px) {
+  .advantages::before,
+  .advantages::after {
+    height: 62px;
+  }
+
   .advantages__wrapper {
     width: 960px;
     padding-top: 75px;
-    padding-bottom: 40px;
+    padding-bottom: 105px;
   }
 
   .advantages__list {
@@ -869,6 +975,43 @@ img {
     padding-left: 60px;
     padding-right: 60px;
   }
+
+  .advantages__item::before {
+    right: 0;
+  }
+
+  .advantages__title {
+    text-align: center;
+  }
+
+  .advantages__description {
+    text-align: center;
+  }
+}
+/* Файл blocks/slider.less */
+.slider__toggles {
+  flex-wrap: wrap;
+}
+
+.slider__toggle {
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin-right: 25px;
+  padding: 0;
+  font-size: 0;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  transform: rotate(45deg);
+}
+
+.slider__toggle:last-child {
+  margin-right: 0;
+}
+
+.slider__toggle--current {
+  background-color: #ffffff;
+  border-color: #ffffff;
 }
 /* Файл blocks/news.less */
 .news {

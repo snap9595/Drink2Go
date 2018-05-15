@@ -1,0 +1,27 @@
+.slider__toggles {
+  flex-wrap: wrap;
+}
+
+.slider__toggle {
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin-right: 25px;
+  padding: 0;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: 1px solid #ffffff;
+
+  transform: rotate(45deg);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.slider__toggle--current {
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
