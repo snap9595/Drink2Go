@@ -173,31 +173,43 @@
       <a class="reviews__write button" href="#">Оставить свой</a>
       <div class="reviews__list slider__list">
         <blockquote class="reviews__item slider__item">
-          <p class="reviews__author-picture">
-            <img class="reviews__author-image" src="img/picture-travis.jpg" width="50" height="33" alt="Фото Трэвиса Баркера">
-          </p>
-          <cite class="reviews__author-name">Трэвис Баркер</cite>
-          <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+          <picture class="reviews__author-picture">
+            <source media="(min-width: 1200px)" srcset="img/picture-travis-desktop@1x.jpg 1x">
+            <source media="(min-width: 768px)" srcset="img/picture-travis-tablet@1x.jpg 1x">
+            <img class="reviews__author-image" src="img/picture-travis-mobile@1x.jpg" width="50" height="33" alt="Фото Трэвиса Баркера">
+          </picture>
+          <div class="reviews__author-info">
+            <cite class="reviews__author-name">Трэвис Баркер</cite>
+            <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+          </div>
         </blockquote>
         <blockquote class="reviews__item slider__item">
-          <p class="reviews__author-picture">
-            <img class="reviews__author-image" src="img/picture-john.jpg" width="50" height="33" alt="Фото Джона Смита">
-          </p>
-          <cite class="reviews__author-name">Джон Смит</cite>
-          <p class="reviews__text">Отличную стрижку мне сделали ребята.</p>
+          <picture class="reviews__author-picture">
+            <source media="(min-width: 1200px)" srcset="img/picture-travis-desktop@1x.jpg 1x">
+            <source media="(min-width: 768px)" srcset="img/picture-travis-tablet@1x.jpg 1x">
+            <img class="reviews__author-image" src="img/picture-travis-mobile@1x.jpg" width="50" height="33" alt="Фото Джона Смита">
+          </picture>
+          <div class="reviews__author-info">
+            <cite class="reviews__author-name">Джон Смит</cite>
+            <p class="reviews__text">Отличную стрижку мне сделали ребята.</p>
+          </div>
         </blockquote>
         <blockquote class="reviews__item slider__item">
-          <p class="reviews__author-picture">
-            <img class="reviews__author-image" src="img/picture-ivan.jpg" width="50" height="33" alt="Фото Ивана Бородайло">
-          </p>
-          <cite class="reviews__author-name">Иван Бородайло</cite>
-          <p class="reviews__text">В Бородинском ваша борода в надёжных руках!</p>
+          <picture class="reviews__author-picture">
+            <source media="(min-width: 1200px)" srcset="img/picture-travis-desktop@1x.jpg 1x">
+            <source media="(min-width: 768px)" srcset="img/picture-travis-tablet@1x.jpg 1x">
+            <img class="reviews__author-image" src="img/picture-travis-mobile@1x.jpg" width="50" height="33" alt="Фото Ивана Бородайло">
+          </picture>
+          <div class="reviews__author-info">
+            <cite class="reviews__author-name">Иван Бородайло</cite>
+            <p class="reviews__text">В Бородинском ваша борода в надёжных руках!</p>
+          </div>
         </blockquote>
         <button class="reviews__prev" type="button">Предыдущий отзыв</button>
         <button class="reviews__next" type="button">Следующий отзыв</button>
       </div>
       <p class="reviews__toggles slider__toggles">
-        <button class="slider__toggle" type="button">1</button>
+        <button class="slider__toggle slider__toggle--current" type="button">1</button>
         <button class="slider__toggle" type="button">2</button>
         <button class="slider__toggle" type="button">3</button>
       </p>
