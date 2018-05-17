@@ -1576,7 +1576,7 @@ img {
 @media (min-width: 768px) {
   .works {
     padding: 0 64px;
-    padding-bottom: 27px;
+    padding-bottom: 30px;
   }
 }
 
@@ -1860,18 +1860,36 @@ img {
 }
 /* Файл blocks/price.less */
 .price {
-  margin: 50px 0;
-  padding: 40px 20px;
-  color: #fff;
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 53px;
+  color: #ffffff;
   background-color: #353535;
-  box-shadow: 0 0 5px #666;
+}
+
+.price::before,
+.price::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  display: block;
+  width: 50%;
+  height: 40px;
+}
+
+.price::before {
+  left: 0;
+  background-image: linear-gradient(to right top, #292929 0%, #292929 50%, transparent 50%);
+}
+
+.price::after {
+  right: 0;
+  background-image: linear-gradient(to left top, #292929 0%, #292929 50%, transparent 50%);
 }
 
 .price__wrapper {
   width: 320px;
   margin: 0 auto;
-  padding-top: 28px;
-  padding-bottom: 87px;
 }
 
 .price__title {
@@ -1883,10 +1901,15 @@ img {
   text-transform: uppercase;
 }
 
+.price__columns {
+  padding: 0 20px;
+}
+
 .price__table {
   display: block;
   font-size: 20px;
   line-height: 27px;
+  border-collapse: collapse;
 }
 
 .price__table tbody {
@@ -1928,8 +1951,10 @@ img {
   position: relative;
   height: 90px;
   margin-top: 25px;
-  padding: 30px 10px;
-  padding-left: 110px;
+  margin-bottom: 0;
+  padding: 16px 10px;
+  padding-right: 31px;
+  padding-left: 114px;
   border: 2px solid #5e5e5e;
   box-sizing: border-box;
 }
@@ -1941,12 +1966,25 @@ img {
   left: 20px;
   width: 57px;
   height: 57px;
-  border: 2px solid white;
+  background-image: url("../img/clock.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
   border-radius: 50%;
   transform: translateY(-50%);
 }
 
 @media (min-width: 768px) {
+  .price {
+    padding-top: 78px;
+    padding-bottom: 45px;
+  }
+
+  .price::before,
+  .price::after {
+    display: none;
+  }
+
   .price__wrapper {
     width: 640px;
     margin: auto;
@@ -1956,6 +1994,10 @@ img {
     margin-bottom: 50px;
     font-size: 40px;
     text-align: left;
+  }
+
+  .price__columns {
+    padding: 0;
   }
 
   .price__table {
@@ -1973,7 +2015,7 @@ img {
 
   .price__table td {
     display: table-cell;
-    padding: 12px 19px;
+    padding: 13px 19px;
     vertical-align: top;
     border: 2px solid #5E5E5E;
   }
@@ -1997,7 +2039,7 @@ img {
   }
 
   .price__table .price__sum {
-    min-width: 160px;
+    min-width: 110px;
     padding: 12px 19px;
   }
 
@@ -2008,8 +2050,9 @@ img {
   .price__discount {
     height: 120px;
     margin-top: 10px;
-    padding: 45px 10px;
-    padding-left: 105px;
+    margin-bottom: 0;
+    padding: 40px 10px;
+    padding-left: 90px;
     font-size: 30px;
     line-height: 27px;
     text-transform: uppercase;
@@ -2025,12 +2068,13 @@ img {
 }
 
 @media (min-width: 1200px) {
-  .price__wrapper {
-    width: 960px;
+  .price {
+    padding-top: 75px;
+    padding-bottom: 81px;
   }
 
-  .price__title {
-    padding-left: 70px;
+  .price__wrapper {
+    width: 960px;
   }
 
   .price__columns {
@@ -2043,12 +2087,20 @@ img {
     width: 630px;
   }
 
+  .price__table .price__name {
+    width: 207px;
+  }
+
+  .price__table .price__sum {
+    min-width: 108px;
+  }
+
   .price__discount {
     width: 270px;
     height: auto;
     margin: 0;
     padding: 10px 50px;
-    padding-top: 190px;
+    padding-top: 198px;
     font-size: 20px;
     line-height: 27px;
     text-transform: none;
