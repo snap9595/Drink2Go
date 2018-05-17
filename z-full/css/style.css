@@ -2144,6 +2144,11 @@ input[type="radio"].visually-hidden {
   background-image: linear-gradient(to left top, #292929 0%, #292929 50%, transparent 50%);
 }
 
+.record__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .record__form {
   padding: 0 20px;
 }
@@ -2183,6 +2188,7 @@ input[type="radio"].visually-hidden {
 .record__item textarea {
   width: 100%;
   padding: 9px 16px 9px 16px;
+  font: inherit;
   font-size: 18px;
   line-height: 30px;
   font-weight: normal;
@@ -2197,13 +2203,102 @@ input[type="radio"].visually-hidden {
 }
 
 @media (min-width: 768px) {
-  ::before,
-  ::after {
+  .record {
+    padding-bottom: 75px;
+  }
+
+  .record::before,
+  .record::after {
     display: none;
+  }
+
+  .record__wrapper {
+    width: 640px;
+  }
+
+  .record__form {
+    padding: 0 65px;
+    padding-top: 28px;
+  }
+
+  .record__col-3 {
+    display: flex;
+    margin-bottom: 35px;
+  }
+
+  .record__item {
+    margin-bottom: 0;
+  }
+
+  .record__item input,
+  .record__item textarea {
+    padding: 19px 16px 19px 23px;
+    font-size: 24px;
+  }
+
+  .record__item textarea {
+    height: 212px;
+  }
+
+  .record__col-2 {
+    margin-bottom: 35px;
+  }
+
+  .record__col-2 .record__item:first-child {
+    margin-bottom: 35px;
+  }
+
+  .record__form .filter {
+    margin-top: 47px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .record {
+    padding-bottom: 87px;
+  }
+
+  .record__wrapper {
+    width: 960px;
+  }
+
+  .record__form {
+    padding-top: 0;
+  }
+
+  .record__col-3 {
+    justify-content: space-between;
+  }
+
+  .record__col-3 .record__item {
+    width: 295px;
+  }
+
+  .record__col-2 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .record__col-2 .record__item {
+    width: 461px;
+  }
+
+  .record__col-2 .record__item:first-child {
+    margin-bottom: 0;
+  }
+
+  .record__form .filter {
+    margin-top: 64px;
+  }
+
+  .record__form .filter--margin {
+    margin-top: 53px;
   }
 }
 /* Файл blocks/filter.less */
 .filter__title {
+  display: block;
+  width: 100%;
   margin-bottom: 35px;
   font-size: 20px;
   line-height: 27px;
@@ -2224,7 +2319,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter__list--row .filter__item {
-  width: 33.333%;
+  width: 93px;
   margin-bottom: 25px;
   text-align: center;
 }
@@ -2314,6 +2409,106 @@ input[type="radio"].visually-hidden {
   background-color: #826550;
   border: none;
   box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .filter__title {
+    position: relative;
+    margin-bottom: 49px;
+    font-size: 30px;
+  }
+
+  .filter__title::before,
+  .filter__title::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    display: block;
+    width: 135px;
+    height: 1px;
+    background-color: #e5ddd5;
+  }
+
+  .filter__title::before {
+    left: 0;
+  }
+
+  .filter__title::after {
+    right: 0;
+  }
+
+  .filter__list--row {
+    justify-content: space-between;
+  }
+
+  .filter__list--row .filter__item {
+    margin-bottom: 0;
+  }
+
+  .filter__input--radio + label {
+    font-size: 24px;
+  }
+
+  .filter__input--radio + label img {
+    margin-top: 28px;
+  }
+
+  .filter__input--radio + label::before {
+    margin-bottom: 25px;
+  }
+
+  .filter--margin .filter__title {
+    margin-bottom: 73px;
+  }
+
+  .filter__list--column {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .filter__list--column .filter__item {
+    width: 50%;
+    margin-bottom: 46px;
+  }
+
+  .filter__input--checkbox + label {
+    font-size: 24px;
+  }
+
+  .filter__button {
+    margin-top: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .filter__list--row {
+    justify-content: space-around;
+  }
+
+  .filter__title {
+    margin-bottom: 53px;
+  }
+
+  .filter__title::before,
+  .filter__title::after {
+    width: 280px;
+  }
+
+  .filter--margin .filter__title {
+    margin-bottom: 71px;
+  }
+
+  .filter__list--column .filter__item {
+    width: 33.33%;
+  }
+
+  .filter__button {
+    margin-top: 31px;
+  }
 }
 /* Файл blocks/page-footer.less */
 .page-footer__wrapper {

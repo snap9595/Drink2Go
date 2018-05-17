@@ -1,4 +1,6 @@
 .filter__title {
+  display: block;
+  width: 100%;
   margin-bottom: 35px;
 
   font-size: 20px;
@@ -21,7 +23,7 @@
   flex-wrap: wrap;
 
   .filter__item {
-    width: 33.333%;
+    width: 93px;
     margin-bottom: 25px;
 
     text-align: center;
@@ -130,9 +132,113 @@
 }
 
 @media (min-width: @tablet-width) {
+  .filter__title {
+    position: relative;
 
+    margin-bottom: 49px;
+
+    font-size: 30px;
+
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 15px;
+
+      display: block;
+      width: 135px;
+      height: 1px;
+
+      background-color: #e5ddd5
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  .filter__list--row {
+    justify-content: space-between;
+
+    .filter__item {
+      margin-bottom: 0;
+    }
+  }
+
+  .filter__input--radio + label {
+    font-size: 24px;
+
+    img {
+      margin-top: 28px;
+    }
+  }
+
+  .filter__input--radio + label::before {
+    margin-bottom: 25px;
+  }
+
+  .filter--margin {
+    .filter__title {
+      margin-bottom: 73px;
+    }
+  }
+
+  .filter__list--column {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .filter__item {
+      width: 50%;
+      margin-bottom: 46px
+    }
+  }
+
+  .filter__input--checkbox + label {
+    font-size: 24px;
+  }
+
+  .filter__button {
+    margin-top: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .filter__list--row {
+    justify-content: space-around;
+  }
 
+  .filter__title {
+    margin-bottom: 53px;
+
+    &::before,
+    &::after {
+      width: 280px;
+    }
+  }
+
+  .filter--margin {
+    .filter__title {
+      margin-bottom: 71px;
+    }
+  }
+
+  .filter__list--column {
+    .filter__item {
+      width: 33.33%;
+    }
+  }
+
+  .filter__button {
+    margin-top: 31px;
+  }
 }

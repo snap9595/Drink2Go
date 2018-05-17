@@ -8,8 +8,11 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<svg style="display:none">
+  <symbol viewBox="0 0 16 16" id="icon-login"><polygon points="0 7 7.01 7 7.01 4.06 10.96 8.01 7.01 11.91 7.01 9.06 0 9.02 0 7"/><polygon points="7.01 0 7.01 2 14.03 2 14.03 13.99 7.01 13.99 7.01 16 16 16 16 0 7.01 0"/></symbol>
+</svg>
 
-<header class="page-header">
+<header class="page-header page-header--inner">
   <a class="page-header__logo" href="index.html">
     <picture>
       <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
@@ -21,8 +24,8 @@
     модификатор main-nav--open для открытого состояния,
     модификатор main-nav--no-js для состояния без js
   -->
-  <nav class="main-nav">
-    <button class="main-nav__toggle" type="button">Открыть меню</button>
+  <nav class="main-nav main-nav--closed main-nav--nojs">
+    <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
@@ -43,7 +46,10 @@
       </ul>
       <ul class="main-nav__list user-list">
         <li class="user-list__item">
-          <a class="user-list__link" href="login.html">Войти</a>
+          <a class="user-list__login" href="login.html">
+            <svg class="user-list__login-icon" width="16" height="16"><use xlink:href="#icon-login"></use></svg>
+            Войти
+          </a>
         </li>
       </ul>
     </div>
@@ -54,7 +60,7 @@
 
   <header class="page-title">
     <h1 class="page-title__title">Наши работы</h1>
-    <a class="button" href="#">На главную</a>
+    <a class="button" href="index.html">На главную</a>
   </header>
 
   <section class="works">
@@ -130,39 +136,41 @@
   <section class="price">
     <div class="price__wrapper">
       <h2 class="price__title">Прейскурант</h2>
-      <table class="price__table">
-        <tr>
-          <td class="price__num">1</td>
-          <td class="price__name">Классическая стрижка</td>
-          <td class="price__addition"><span class="bracket">(</span>с мытьём головы<span class="bracket">)</span></td>
-          <td class="price__sum">1 500 руб.</td>
-        </tr>
-        <tr>
-          <td class="price__num">2</td>
-          <td class="price__name">Современный вариант</td>
-          <td class="price__addition"><span class="bracket">(</span>с мытьём головы<span class="bracket">)</span></td>
-          <td class="price__sum">1 500 руб.</td>
-        </tr>
-        <tr>
-          <td class="price__num">3</td>
-          <td class="price__name">Индивидуальный подход</td>
-          <td class="price__addition"><span class="bracket">(</span>с мытьём головы<span class="bracket">)</span></td>
-          <td class="price__sum">2 000 руб.</td>
-        </tr>
-        <tr>
-          <td class="price__num">4</td>
-          <td class="price__name">Бритьё бороды</td>
-          <td class="price__addition"><span class="bracket">(</span>без мытья<span class="bracket">)</span></td>
-          <td class="price__sum">500 руб.</td>
-        </tr>
-        <tr>
-          <td class="price__num">5</td>
-          <td class="price__name">Бритьё головы</td>
-          <td class="price__addition"><span class="bracket">(</span>с мытьём головы<span class="bracket">)</span></td>
-          <td class="price__sum">1 000 руб.</td>
-        </tr>
-      </table>
-      <p class="price__discount">C 10:00 до 14:00 скидка 20%</p>
+      <div class="price__columns">
+        <table class="price__table">
+          <tr>
+            <td class="price__num">1</td>
+            <td class="price__name">Классическая стрижка</td>
+            <td class="price__addition"><span class="bracket">(</span>с мытьём головы<span class="bracket">)</span></td>
+            <td class="price__sum">1 500 руб.</td>
+          </tr>
+          <tr>
+            <td class="price__num">2</td>
+            <td class="price__name">Современный вариант</td>
+            <td class="price__addition"><span class="bracket">(</span>с мытьём головы<span class="bracket">)</span></td>
+            <td class="price__sum">1 500 руб.</td>
+          </tr>
+          <tr>
+            <td class="price__num">3</td>
+            <td class="price__name">Индивидуальный подход</td>
+            <td class="price__addition"><span class="bracket">(</span>с мытьём головы<span class="bracket">)</span></td>
+            <td class="price__sum">2 000 руб.</td>
+          </tr>
+          <tr>
+            <td class="price__num">4</td>
+            <td class="price__name">Бритьё бороды</td>
+            <td class="price__addition"><span class="bracket">(</span>без мытья<span class="bracket">)</span></td>
+            <td class="price__sum">500 руб.</td>
+          </tr>
+          <tr>
+            <td class="price__num">5</td>
+            <td class="price__name">Бритьё головы</td>
+            <td class="price__addition"><span class="bracket">(</span>с мытьём головы<span class="bracket">)</span></td>
+            <td class="price__sum">1 000 руб.</td>
+          </tr>
+        </table>
+        <p class="price__discount">C 10:00 до 14:00 скидка 20%</p>
+      </div>
     </div>
   </section>
 
@@ -174,7 +182,9 @@
       <b class="contacts__title">Барбершоп «Бородинский»</b>
       <p class="contacts__text">
         г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
-        <a class="contacts__phone" href="tel:+78125556666"><span class="contacts__phone-mobile">Тел.:</span> +7 (812) 555-66-66</a>
+        <a class="contacts__phone" href="tel:+78125556666">
+          <span class="contacts__phone-mobile">Тел.:</span> +7 (812) 555-66-66
+        </a>
       </p>
     </div>
     <div class="page-footer__social social">
@@ -193,10 +203,12 @@
     </div>
     <div class="page-footer__copyright copyright">
       <b class="copyright__text">Разработано:</b>
-      <a class="copyright__link button" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
     </div>
   </div>
 </footer>
+
+<script src="js/script.min.js"></script>
 
 </body>
 </html>
