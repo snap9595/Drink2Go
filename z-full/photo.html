@@ -208,6 +208,33 @@
   </div>
 </footer>
 
+<section class="modal">
+  <h2>Личный кабинет</h2>
+  <p class="modal__description">Введите свой логин и пароль, чтобы войти</p>
+  <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+    <p>
+      <label class="visually-hidden" for="user-login">Логин</label>
+      <input class="modal__input modal__input--icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+    </p>
+    <p>
+      <label class="visually-hidden" for="user-password">Пароль</label>
+      <input class=" modal__input modal__input--icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+    </p>
+    <p class="modal__help">
+      <label class="modal__help-checkbox">
+        <input type="checkbox" name="remember" class="visually-hidden">
+        <span class="modal__help-indicator"></span>
+        Запомните меня
+      </label>
+      <a class="modal__restore" href="#">Я забыл пароль!</a>
+    </p>
+    <div class="modal__buttons">
+      <button class="modal__button button" type="submit">Войти</button>
+      <button class="modal__button modal__button--close" type="button">Закрыть</button>
+    </div>
+  </form>
+</section>
+
 <script src="js/script.min.js"></script>
 
 </body>
