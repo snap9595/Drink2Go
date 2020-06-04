@@ -1,60 +1,59 @@
-const gulp = require('gulp');
-const less = require('gulp-less');
-const postcss = require('gulp-postcss');
-const terser = require('gulp-terser');
-const rename = require('gulp-rename');
-const sync = require('browser-sync').create();
+import autoprefixer from 'autoprefixer';
+import csso from 'postcss-csso';
+import gulp from 'gulp';
+import less from 'gulp-less';
+import postcss from 'gulp-postcss';
+import rename from 'gulp-rename';
+import sync from 'browser-sync';
+import terser from 'gulp-terser';
 
-gulp.task('styles:pack', () => {
+export const styles = () => {
   return gulp.src('less/style.less')
     .pipe(less())
     .pipe(postcss([
-      require('autoprefixer'),
-      require('postcss-csso'),
+      autoprefixer,
+      csso,
     ]))
     .pipe(rename({
       suffix: '.min'
     }))
     .pipe(gulp.dest('css'))
     .pipe(sync.stream());
-});
+}
 
-gulp.task('styles:merge', () => {
-  return gulp.src('less/style.less')
-    .pipe(less())
-    .pipe(gulp.dest('css'))
-    .pipe(sync.stream());
-});
-
-gulp.task('js', () => {
+export const scripts = () => {
   return gulp.src('js/script.js')
     .pipe(terser())
     .pipe(rename({
       suffix: '.min'
     }))
-  .pipe(gulp.dest('js'))
-  .pipe(sync.stream());
-});
+    .pipe(gulp.dest('js'))
+    .pipe(sync.stream());
+}
 
-gulp.task('server', () => {
-	sync.init({
+const server = sync.create();
+
+const reload = (done) => {
+  server.reload();
+  done();
+}
+
+const serve = (done) => {
+  server.init({
 		ui: false,
 		notify: false,
 		server: {
 			baseDir: '.'
-		}
-	});
-	gulp.watch([
-    '*.html',
-    'less/**/*.less',
-    'js/script.js',
-  ]).on('change', () => {
-    sync.reload();
+		},
   });
-});
+  done();
+}
 
-gulp.task('default', gulp.series(
-  'styles:merge',
-  'js',
-  'server',
-));
+const watch = () => {
+  gulp.watch('less/**/*.less', gulp.series(styles, reload));
+  gulp.watch('js/script.js', gulp.series(scripts, reload));
+}
+
+export default gulp.series(
+  styles, scripts, serve, watch
+);
