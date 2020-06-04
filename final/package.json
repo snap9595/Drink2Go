@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "gulp": "^4.0.2",
+    "gulp-less": "^4.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-terser": "^1.2.0",
+    "postcss-csso": "^4.0.0",
+    "stylelint": "^13.6.0",
+    "stylelint-config-htmlacademy": "^0.1.4"
+  },
+  "editorconfig-cli": [
+    "*/*.html",
+    "*/less/**/*.less",
+    "*/js/*.js"
+  ],
+  "scripts": {
+    "start": "gulp",
+    "editorconfig": "editorconfig-cli",
+    "test": "npm run stylelint",
+    "stylelint": "stylelint '**/*.less' --syntax less"
+  }
+}
