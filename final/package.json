@@ -16,6 +16,8 @@
   },
   "scripts": {
     "start": "gulp",
+    "styles": "gulp styles",
+    "scripts": "gulp scripts",
     "editorconfig": "editorconfig-checker -exclude *.css",
     "test": "npm run editorconfig && npm run stylelint",
     "stylelint": "stylelint '**/*.less' --syntax less"
