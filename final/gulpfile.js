@@ -3,8 +3,9 @@ const less = require('gulp-less');
 const postcss = require('gulp-postcss');
 const terser = require('gulp-terser');
 const rename = require('gulp-rename');
+const sync = require('browser-sync').create();
 
-gulp.task('styles:merge', () => {
+gulp.task('styles:pack', () => {
   return gulp.src('less/style.less')
     .pipe(less())
     .pipe(postcss([
@@ -14,13 +15,15 @@ gulp.task('styles:merge', () => {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('css'));
+    .pipe(gulp.dest('css'))
+    .pipe(sync.stream());
 });
 
-gulp.task('styles:pack', () => {
+gulp.task('styles:merge', () => {
   return gulp.src('less/style.less')
     .pipe(less())
-    .pipe(gulp.dest('css'));
+    .pipe(gulp.dest('css'))
+    .pipe(sync.stream());
 });
 
 gulp.task('js', () => {
@@ -29,10 +32,29 @@ gulp.task('js', () => {
     .pipe(rename({
       suffix: '.min'
     }))
-  .pipe(gulp.dest('js'));
+  .pipe(gulp.dest('js'))
+  .pipe(sync.stream());
+});
+
+gulp.task('server', () => {
+	sync.init({
+		ui: false,
+		notify: false,
+		server: {
+			baseDir: '.'
+		}
+	});
+	gulp.watch([
+    '*.html',
+    'less/**/*.less',
+    'js/script.js',
+  ]).on('change', () => {
+    sync.reload();
+  });
 });
 
 gulp.task('default', gulp.series(
-  'less',
+  'styles:merge',
   'js',
+  'server',
 ));

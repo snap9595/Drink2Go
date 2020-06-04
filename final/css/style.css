@@ -1,3 +1,4 @@
+/* Файл global/normalize.less */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -303,21 +304,9 @@ template {
 [hidden] {
   display: none;
 }
-/* Файл scaffolding.less */
-@font-face {
-  font-weight: normal;
-  font-family: "PT Sans Narrow";
-  font-style: normal;
-  /* font-display: swap; */
-  src: url("../fonts/PTSansNarrow.woff2") format("woff2"), url("../fonts/PTSansNarrow.woff") format("woff");
-}
-@font-face {
-  font-weight: bold;
-  font-family: "PT Sans Narrow";
-  font-style: normal;
-  /* font-display: swap; */
-  src: url("../fonts/PTSansNarrowBold.woff2") format("woff2"), url("../fonts/PTSansNarrowBold.woff") format("woff");
-}
+/* Файл global/variables.less */
+/* Файл global/mixins.less */
+/* Файл global/global.less */
 body {
   min-width: 320px;
   margin: 0;
@@ -333,9 +322,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -347,6 +334,21 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+/* Файл global/global.less */
+@font-face {
+  font-family: "PT Sans Narrow";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/pt-sans-narrow.woff2") format("woff2"), url("../fonts/pt-sans-narrow.woff") format("woff");
+}
+@font-face {
+  font-family: "PT Sans Narrow";
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/pt-sans-narrow-bold.woff2") format("woff2"), url("../fonts/pt-sans-narrow-bold.woff") format("woff");
 }
 /* Файл blocks/button.less */
 .button {

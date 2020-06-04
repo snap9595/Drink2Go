@@ -5,10 +5,8 @@
   &::before,
   &::after {
     content: "";
-
     position: absolute;
     bottom: -1px;
-
     display: block;
     width: 50%;
     height: 40px;
@@ -16,13 +14,11 @@
 
   &::before {
     left: 0;
-
     background-image: linear-gradient(to right top, @bg-darkgrey 0%, @bg-darkgrey 50%, transparent 50%);
   }
 
   &::after {
     right: 0;
-
     background-image: linear-gradient(to left top, @bg-darkgrey 0%, @bg-darkgrey 50%, transparent 50%);
   }
 }
@@ -38,7 +34,6 @@
   fieldset {
     margin: 0;
     padding: 0;
-
     border: none;
   }
 
@@ -71,25 +66,20 @@
   textarea {
     width: 100%;
     padding: 9px 16px 9px 16px;
-
     font: inherit;
     font-size: 18px;
     line-height: 30px;
     font-weight: normal;
-
     background-color: #ffffff;
     border: 1px solid #e5ddd5;
-
     box-sizing: border-box;
   }
 
   textarea {
     height: 112px;
-
     resize: none;
   }
 }
-
 
 @media (min-width: @tablet-width) {
   .record {
@@ -108,11 +98,14 @@
   .record__form {
     padding: 0 65px;
     padding-top: 28px;
+
+    .filter {
+      margin-top: 47px;
+    }
   }
 
   .record__col-3 {
     display: flex;
-
     margin-bottom: 35px;
   }
 
@@ -122,7 +115,6 @@
     input,
     textarea {
       padding: 19px 16px 19px 23px;
-
       font-size: 24px;
     }
 
@@ -138,12 +130,6 @@
       margin-bottom: 35px;
     }
   }
-
-  .record__form {
-    .filter {
-      margin-top: 47px;
-    }
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -157,6 +143,14 @@
 
   .record__form {
     padding-top: 0;
+
+    .filter {
+      margin-top: 64px;
+    }
+
+    .filter--margin {
+      margin-top: 53px;
+    }
   }
 
   .record__col-3 {
@@ -177,16 +171,6 @@
       &:first-child {
         margin-bottom: 0;
       }
-    }
-  }
-
-  .record__form {
-    .filter {
-      margin-top: 64px;
-    }
-
-    .filter--margin {
-      margin-top: 53px;
     }
   }
 }

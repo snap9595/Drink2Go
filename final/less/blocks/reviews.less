@@ -1,17 +1,13 @@
 .reviews {
   position: relative;
-
   color: #000000;
-
   background-color: #f8f5f2;
 
   &::before,
   &::after {
     content: "";
-
     position: absolute;
     bottom: 0;
-
     display: block;
     width: 50%;
     height: 34px;
@@ -19,20 +15,17 @@
 
   &::before {
     left: 0;
-
     background-image: linear-gradient(to right top, @bg-darkgrey 0%, @bg-darkgrey 50%, transparent 50%);
   }
 
   &::after {
     right: 0;
-
     background-image: linear-gradient(to left top, @bg-darkgrey 0%, @bg-darkgrey 50%, transparent 50%);
   }
 }
 
 .reviews__wrapper {
   position: relative;
-
   width: 320px;
   margin: 0 auto;
   padding-top: 28px;
@@ -42,7 +35,6 @@
 .reviews__title {
   margin: 0;
   margin-bottom: 28px;
-
   font-size: 30px;
   line-height: 30px;
   font-weight: bold;
@@ -60,7 +52,6 @@
 
 .reviews__item {
   display: flex;
-
   margin: 0 19px;
 
   &:nth-child(2),
@@ -88,7 +79,6 @@
 .reviews__author-name {
   display: block;
   margin-bottom: 10px;
-
   font-size: 24px;
   line-height: 27px;
   font-weight: bold;
@@ -97,7 +87,6 @@
 
 .reviews__text {
   margin: 0;
-
   font-size: 18px;
   line-height: 27px;
 }
@@ -106,13 +95,10 @@
 .reviews__next {
   position: absolute;
   top: 0;
-
   display: none;
   width: 50px;
   height: 100%;
-
   font-size: 0;
-
   background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
@@ -121,15 +107,12 @@
 
 .reviews__prev {
   left: 0;
-
   background-image: url("../img/arrow-left.svg");
 }
 
 .reviews__next {
   right: 0;
-
   background-image: url("../img/arrow-left.svg");
-
   transform: rotate(180deg);
 }
 
@@ -138,12 +121,10 @@
   bottom: 48px;
   left: 0;
   right: 0;
-
   display: flex;
   width: 76px;
   margin: 0 auto;
 }
-
 
 @media (min-width: @tablet-width) {
   .reviews {
@@ -164,7 +145,6 @@
   .reviews__title {
     margin-right: 200px;
     margin-bottom: 46px;
-
     font-size: 40px;
     line-height: 30px;
     font-weight: bold;
@@ -173,11 +153,9 @@
 
   .reviews__item {
     position: relative;
-
     margin: 0 50px;
     padding-top: 30px;
     padding-bottom: 37px;
-
     border-top: 1px solid #e5ddd5;
     border-bottom: 1px solid #e5ddd5;
   }
@@ -207,7 +185,6 @@
     position: absolute;
     top: -9px;
     right: 0;
-
     display: block;
     padding-right: 23px;
     padding-left: 24px;
@@ -216,10 +193,8 @@
 
   .reviews__toggles {
     bottom: -4px;
-
     padding-left: 30px;
     padding-right: 30px;
-
     background-color: #f8f5f2;
   }
 }
@@ -243,7 +218,6 @@
     padding-top: 0;
     padding-bottom: 0;
     margin: 0 70px;
-
     border: 1px solid #e5ddd5;
   }
 
