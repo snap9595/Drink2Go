@@ -1,13 +1,13 @@
-import autoprefixer from 'autoprefixer';
-import csso from 'postcss-csso';
-import gulp from 'gulp';
-import less from 'gulp-less';
-import postcss from 'gulp-postcss';
-import rename from 'gulp-rename';
-import sync from 'browser-sync';
-import terser from 'gulp-terser';
+const autoprefixer = require('autoprefixer');
+const csso = require('postcss-csso');
+const gulp = require('gulp');
+const less = require('gulp-less');
+const postcss = require('gulp-postcss');
+const rename = require('gulp-rename');
+const sync = require('browser-sync');
+const terser = require('gulp-terser');
 
-export const styles = () => {
+const styles = () => {
   return gulp.src('less/style.less')
     .pipe(less())
     .pipe(postcss([
@@ -21,7 +21,9 @@ export const styles = () => {
     .pipe(sync.stream());
 }
 
-export const scripts = () => {
+exports.styles = styles;
+
+const scripts = () => {
   return gulp.src('js/script.js')
     .pipe(terser())
     .pipe(rename({
@@ -30,6 +32,8 @@ export const scripts = () => {
     .pipe(gulp.dest('js'))
     .pipe(sync.stream());
 }
+
+exports.scripts = scripts;
 
 const server = sync.create();
 
@@ -54,6 +58,6 @@ const watch = () => {
   gulp.watch('js/script.js', gulp.series(scripts, reload));
 }
 
-export default gulp.series(
+exports.default = gulp.series(
   styles, scripts, serve, watch
 );
