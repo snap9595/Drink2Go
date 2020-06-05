@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "browser-sync": "^2.26.7",
+    "editorconfig-checker": "^3.0.5",
+    "gulp": "^4.0.2",
+    "gulp-less": "^4.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-terser": "^1.2.0",
+    "postcss-csso": "^4.0.0",
+    "stylelint": "^13.6.0",
+    "stylelint-config-htmlacademy": "^0.1.4"
+  },
+  "scripts": {
+    "start": "gulp",
+    "styles": "gulp styles",
+    "scripts": "gulp scripts",
+    "editorconfig": "editorconfig-checker -exclude *.css",
+    "test": "npm run editorconfig && npm run stylelint",
+    "stylelint": "stylelint '**/*.less' --syntax less"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
