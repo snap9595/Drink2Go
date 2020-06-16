@@ -2,7 +2,7 @@
   position: relative;
   padding-top: 70px;
   padding-bottom: 53px;
-  color: #ffffff;
+  color: var(--basic-white);
   background-color: #353535;
 
   &::before,
@@ -17,12 +17,12 @@
 
   &::before {
     left: 0;
-    background-image: linear-gradient(to right top, @bg-darkgrey 0%, @bg-darkgrey 50%, transparent 50%);
+    background-image: linear-gradient(to right top, var(--basic-extra-dark) 0%, var(--basic-extra-dark) 50%, transparent 50%);
   }
 
   &::after {
     right: 0;
-    background-image: linear-gradient(to left top, @bg-darkgrey 0%, @bg-darkgrey 50%, transparent 50%);
+    background-image: linear-gradient(to left top, var(--basic-extra-dark) 0%, var(--basic-extra-dark) 50%, transparent 50%);
   }
 }
 

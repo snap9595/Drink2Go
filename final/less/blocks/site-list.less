@@ -9,10 +9,10 @@
   padding-bottom: 13px;
   font-size: 18px;
   line-height: 24px;
-  color: #ffffff;
+  color: var(--basic-white);
   text-transform: uppercase;
   text-decoration: none;
-  background-color: #826550;
+  background-color: var(--special-neutral);
   border-top: 1px solid #886e5b;
   border-bottom: 1px solid #71543f;
 }
@@ -25,8 +25,8 @@
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
-    background-color: #6a4d38;
-    border-top-color: #6a4d38;
+    background-color: var(--special-dark);
+    border-top-color: var(--special-dark);
   }
 }
 
@@ -38,7 +38,7 @@
   width: 16px;
   height: 16px;
   opacity: 0.3;
-  fill: #ffffff;
+  fill: var(--basic-white);
 }
 
 
@@ -67,7 +67,7 @@
         bottom: -3px;
         left: 0;
         height: 3px;
-        background: #826550;
+        background: var(--special-neutral);
       }
     }
   }
@@ -89,23 +89,23 @@
 
   .site-list__item a[href] {
     &:hover {
-      color: #826550;
-      background-color: #000000;
+      color: var(--special-neutral);
+      background-color: var(--basic-black);
     }
 
     &:hover .site-list__icon-comb {
       opacity: 1;
-      fill: #826550;
+      fill: var(--special-neutral);
     }
 
     &:active {
-      color: #ffffff;
-      background-color: #000000;
+      color: var(--basic-white);
+      background-color: var(--basic-black);
     }
 
     &:active .site-list__icon-comb {
       opacity: 0.3;
-      fill: #ffffff;
+      fill: var(--basic-white);
     }
   }
 }
@@ -138,19 +138,19 @@
 
   .site-list__item a[href] {
     &:hover {
-      color: #000000;
-      background-color: #ffffff;
+      color: var(--basic-black);
+      background-color: var(--basic-white);
     }
 
     &:active {
       color: rgba(0, 0, 0, 0.3);
-      background-color: #ffffff;
+      background-color: var(--basic-white);
       opacity: 1;
     }
 
     &:hover .site-list__icon-comb {
       opacity: 0.3;
-      fill: #000000;
+      fill: var(--basic-black);
     }
 
     &:active .site-list__icon-comb {
