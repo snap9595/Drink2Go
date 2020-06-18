@@ -54,6 +54,7 @@ const serve = (done) => {
 }
 
 const watch = () => {
+  gulp.watch('*.html', gulp.series(reload));
   gulp.watch('less/**/*.less', gulp.series(styles, reload));
   gulp.watch('js/script.js', gulp.series(scripts, reload));
 }
