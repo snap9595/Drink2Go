@@ -1,7 +1,7 @@
 .reviews {
   position: relative;
   color: #000000;
-  background-color: #f8f5f2;
+  background-color: @lightgrey;
 
   &::before,
   &::after {
@@ -15,12 +15,12 @@
 
   &::before {
     left: 0;
-    background-image: linear-gradient(to right top, @bg-darkgrey 0%, @bg-darkgrey 50%, transparent 50%);
+    background-image: linear-gradient(to right top, @darkgrey 0%, @darkgrey 50%, transparent 50%);
   }
 
   &::after {
     right: 0;
-    background-image: linear-gradient(to left top, @bg-darkgrey 0%, @bg-darkgrey 50%, transparent 50%);
+    background-image: linear-gradient(to left top, @darkgrey 0%, @darkgrey 50%, transparent 50%);
   }
 }
 
@@ -195,10 +195,9 @@
     bottom: -4px;
     padding-left: 30px;
     padding-right: 30px;
-    background-color: #f8f5f2;
+    background-color: @lightgrey;
   }
 }
-
 
 @media (min-width: @desktop-width) {
   .reviews {
