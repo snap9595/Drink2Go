@@ -1,7 +1,7 @@
 .news {
-  color: @basic-black;
-  background-color: @basic-neutral;
-  border-bottom: 1px solid @basic-light;
+  color: #000000;
+  background-color: @lightgrey;
+  border-bottom: 1px solid #e5ddd5;
 }
 
 .news__wrapper {
@@ -27,9 +27,9 @@
   margin-bottom: 15px;
   padding-bottom: 18px;
   padding-left: 70px;
-  color: @basic-black;
+  color: #000000;
   text-decoration: none;
-  border-bottom: 1px solid @basic-light;
+  border-bottom: 1px solid #e5ddd5;
 
   &:nth-child(n+3) {
     display: none;
@@ -42,28 +42,28 @@
 
   &:hover,
   &:focus {
-    color: @special-neutral;
+    color: #826550;
     text-decoration: underline;
 
     .news__date {
-      background-color: @special-neutral;
+      background-color: #826550;
     }
 
     .news__day::after {
-      border-color: @special-neutral transparent transparent transparent;
+      border-color: #826550 transparent transparent transparent;
     }
   }
 
   &:active {
-    color: @special-dark;
+    color: #6a4d38;
 
     .news__date {
       color: rgba(255, 255, 255, 0.3);
-      background-color: @special-dark;
+      background-color: #6a4d38;
     }
 
     .news__day::after {
-      border-color: @special-dark transparent transparent transparent;
+      border-color: #6a4d38 transparent transparent transparent;
     }
   }
 }
@@ -87,11 +87,11 @@
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 5px;
-  color: @basic-white;
+  color: #ffffff;
   font-size: 16px;
   line-height: 16px;
   text-align: center;
-  background-color: @basic-black;
+  background-color: #000000;
 }
 
 .news__day {
@@ -111,7 +111,7 @@
     height: 0;
     border-style: solid;
     border-width: 10px 24px 0 24px;
-    border-color: @basic-black transparent transparent transparent;
+    border-color: #000000 transparent transparent transparent;
   }
 }
 

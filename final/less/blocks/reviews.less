@@ -1,7 +1,7 @@
 .reviews {
   position: relative;
-  color: @basic-black;
-  background-color: #f8f5f2;
+  color: #000000;
+  background-color: @lightgrey;
 
   &::before,
   &::after {
@@ -15,12 +15,12 @@
 
   &::before {
     left: 0;
-    background-image: linear-gradient(to right top, @basic-extra-dark) 0%, var(--basic-extra-dark) 50%, transparent 50%;
+    background-image: linear-gradient(to right top, @darkgrey) 0%, var(--basic-extra-dark) 50%, transparent 50%;
   }
 
   &::after {
     right: 0;
-    background-image: linear-gradient(to left top, @basic-extra-dark) 0%, var(--basic-extra-dark) 50%, transparent 50%;
+    background-image: linear-gradient(to left top, @darkgrey) 0%, var(--basic-extra-dark) 50%, transparent 50%;
   }
 }
 
@@ -102,7 +102,7 @@
   background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
-  border: 1px solid @basic-light;
+  border: 1px solid #e5ddd5;
 }
 
 .reviews__prev {
@@ -156,8 +156,8 @@
     margin: 0 50px;
     padding-top: 30px;
     padding-bottom: 37px;
-    border-top: 1px solid @basic-light;
-    border-bottom: 1px solid @basic-light;
+    border-top: 1px solid #e5ddd5;
+    border-bottom: 1px solid #e5ddd5;
   }
 
   .reviews__prev,
@@ -195,10 +195,9 @@
     bottom: -4px;
     padding-left: 30px;
     padding-right: 30px;
-    background-color: #f8f5f2;
+    background-color: @lightgrey;
   }
 }
-
 
 @media (min-width: @desktop-width) {
   .reviews {
@@ -218,7 +217,7 @@
     padding-top: 0;
     padding-bottom: 0;
     margin: 0 70px;
-    border: 1px solid @basic-light;
+    border: 1px solid #e5ddd5;
   }
 
   .reviews__author-picture {
