@@ -14,12 +14,12 @@
 
   &::before {
     left: 0;
-    background-image: linear-gradient(to right top, var(--basic-extra-dark) 0%, var(--basic-extra-dark) 50%, transparent 50%);
+    background-image: linear-gradient(to right top, @basic-extra-dark) 0%, var(--basic-extra-dark) 50%, transparent 50%;
   }
 
   &::after {
     right: 0;
-    background-image: linear-gradient(to left top, var(--basic-extra-dark) 0%, var(--basic-extra-dark) 50%, transparent 50%);
+    background-image: linear-gradient(to left top, @basic-extra-dark) 0%, var(--basic-extra-dark) 50%, transparent 50%;
   }
 }
 
@@ -70,8 +70,8 @@
     font-size: 18px;
     line-height: 30px;
     font-weight: normal;
-    background-color: var(--basic-white);
-    border: 1px solid var(--basic-light);
+    background-color: @basic-white;
+    border: 1px solid @basic-light;
     box-sizing: border-box;
   }
 

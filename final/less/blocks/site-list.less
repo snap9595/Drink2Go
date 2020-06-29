@@ -9,10 +9,10 @@
   padding-bottom: 13px;
   font-size: 18px;
   line-height: 24px;
-  color: var(--basic-white);
+  color: @basic-white;
   text-transform: uppercase;
   text-decoration: none;
-  background-color: var(--special-neutral);
+  background-color: @special-neutral;
   border-top: 1px solid #886e5b;
   border-bottom: 1px solid #71543f;
 }
@@ -25,8 +25,8 @@
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
-    background-color: var(--special-dark);
-    border-top-color: var(--special-dark);
+    background-color: @special-dark;
+    border-top-color: @special-dark;
   }
 }
 
@@ -38,7 +38,7 @@
   width: 16px;
   height: 16px;
   opacity: 0.3;
-  fill: var(--basic-white);
+  fill: @basic-white;
 }
 
 
@@ -67,7 +67,7 @@
         bottom: -3px;
         left: 0;
         height: 3px;
-        background: var(--special-neutral);
+        background: @special-neutral;
       }
     }
   }
@@ -89,23 +89,23 @@
 
   .site-list__item a[href] {
     &:hover {
-      color: var(--special-neutral);
-      background-color: var(--basic-black);
+      color: @special-neutral;
+      background-color: @basic-black;
     }
 
     &:hover .site-list__icon-comb {
       opacity: 1;
-      fill: var(--special-neutral);
+      fill: @special-neutral;
     }
 
     &:active {
-      color: var(--basic-white);
-      background-color: var(--basic-black);
+      color: @basic-white;
+      background-color: @basic-black;
     }
 
     &:active .site-list__icon-comb {
       opacity: 0.3;
-      fill: var(--basic-white);
+      fill: @basic-white;
     }
   }
 }
@@ -138,19 +138,19 @@
 
   .site-list__item a[href] {
     &:hover {
-      color: var(--basic-black);
-      background-color: var(--basic-white);
+      color: @basic-black;
+      background-color: @basic-white;
     }
 
     &:active {
       color: rgba(0, 0, 0, 0.3);
-      background-color: var(--basic-white);
+      background-color: @basic-white;
       opacity: 1;
     }
 
     &:hover .site-list__icon-comb {
       opacity: 0.3;
-      fill: var(--basic-black);
+      fill: @basic-black;
     }
 
     &:active .site-list__icon-comb {

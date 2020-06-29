@@ -1,7 +1,7 @@
 .news {
-  color: var(--basic-black);
-  background-color: var(--basic-neutral);
-  border-bottom: 1px solid var(--basic-light);
+  color: @basic-black;
+  background-color: @basic-neutral;
+  border-bottom: 1px solid @basic-light;
 }
 
 .news__wrapper {
@@ -27,9 +27,9 @@
   margin-bottom: 15px;
   padding-bottom: 18px;
   padding-left: 70px;
-  color: var(--basic-black);
+  color: @basic-black;
   text-decoration: none;
-  border-bottom: 1px solid var(--basic-light);
+  border-bottom: 1px solid @basic-light;
 
   &:nth-child(n+3) {
     display: none;
@@ -42,28 +42,28 @@
 
   &:hover,
   &:focus {
-    color: var(--special-neutral);
+    color: @special-neutral;
     text-decoration: underline;
 
     .news__date {
-      background-color: var(--special-neutral);
+      background-color: @special-neutral;
     }
 
     .news__day::after {
-      border-color: var(--special-neutral) transparent transparent transparent;
+      border-color: @special-neutral transparent transparent transparent;
     }
   }
 
   &:active {
-    color: var(--special-dark);
+    color: @special-dark;
 
     .news__date {
       color: rgba(255, 255, 255, 0.3);
-      background-color: var(--special-dark);
+      background-color: @special-dark;
     }
 
     .news__day::after {
-      border-color: var(--special-dark) transparent transparent transparent;
+      border-color: @special-dark transparent transparent transparent;
     }
   }
 }
@@ -87,11 +87,11 @@
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 5px;
-  color: var(--basic-white);
+  color: @basic-white;
   font-size: 16px;
   line-height: 16px;
   text-align: center;
-  background-color: var(--basic-black);
+  background-color: @basic-black;
 }
 
 .news__day {
@@ -111,7 +111,7 @@
     height: 0;
     border-style: solid;
     border-width: 10px 24px 0 24px;
-    border-color: var(--basic-black) transparent transparent transparent;
+    border-color: @basic-black transparent transparent transparent;
   }
 }
 
