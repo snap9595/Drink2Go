@@ -1,20 +1,30 @@
 // Stats
 
 .stats {
+  background-color: @darkgrey;
+}
+
+.stats__wrapper {
   margin: auto;
   position: relative;
 
   @media (min-width: @tablet-width) {
+    @stats-shift: -179px;
+
     padding: 0 64px;
-    margin-top: -180px;
+    top: @stats-shift;
+    margin-bottom: @stats-shift;
   }
 
   @media (min-width: @desktop-width) {
+    @stats-shift: -159px;
+
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: stretch;
     max-width: 960px;
-    margin-top: -161px;
+    top: @stats-shift;
+    margin-bottom: @stats-shift;
   }
 }
 
