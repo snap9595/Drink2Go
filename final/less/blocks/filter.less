@@ -10,15 +10,15 @@
 }
 
 .filter__list {
-  display: flex;
+  display: grid;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .filter__list--row {
-  flex-direction: row;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(3, min-content);
+  justify-content: space-between;
 
   .filter__item {
     width: 93px;
@@ -28,8 +28,6 @@
 }
 
 .filter__list--column {
-  flex-direction: column;
-
   .filter__item {
     margin-bottom: 19px;
   }
@@ -141,7 +139,8 @@
   }
 
   .filter__list--row {
-    justify-content: space-between;
+    grid-template-columns: repeat(5, min-content);
+    justify-content: space-around;
 
     .filter__item {
       margin-bottom: 0;
@@ -167,11 +166,9 @@
   }
 
   .filter__list--column {
-    flex-direction: row;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
 
     .filter__item {
-      width: 50%;
       margin-bottom: 46px;
     }
   }
@@ -190,10 +187,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .filter__list--row {
-    justify-content: space-around;
-  }
-
   .filter__title {
     margin-bottom: 53px;
 
@@ -210,9 +203,7 @@
   }
 
   .filter__list--column {
-    .filter__item {
-      width: 33.33%;
-    }
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .filter__button {
