@@ -124,27 +124,19 @@
 
 @media (min-width: @tablet-width) {
   .filter__title {
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    column-gap: 43px;
     margin-bottom: 49px;
     font-size: 30px;
 
     &::before,
     &::after {
       content: "";
-      position: absolute;
-      top: 15px;
       display: block;
-      width: 135px;
       height: 1px;
       background-color: #e5ddd5;
-    }
-
-    &::before {
-      left: 0;
-    }
-
-    &::after {
-      right: 0;
     }
   }
 
