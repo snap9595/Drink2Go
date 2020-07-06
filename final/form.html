@@ -62,41 +62,37 @@
     <a class="button" href="index.html">На главную</a>
   </header>
 
-  <section class="record">
-    <form class="record__form record__wrapper" method="post" action="https://echo.htmlacademy.ru">
-      <fieldset>
+  <section class="appointment">
+    <form class="appointment__form appointment__wrapper" method="post" action="https://echo.htmlacademy.ru">
+      <fieldset class="appointment__fields">
         <legend class="visually-hidden">Данные для записи</legend>
-        <div class="record__col-3">
-          <p class="record__item">
-            <label class="visually-hidden" for="user__first-name">Имя</label>
-            <input id="user__first-name" type="text" placeholder="Владимир">
-          </p>
-          <p class="record__item">
-            <label class="visually-hidden" for="user__last-name">Фамилия</label>
-            <input id="user__last-name" type="text" placeholder="Дроздов">
-          </p>
-          <p class="record__item">
-            <label class="visually-hidden" for="user__second-name">Отчество</label>
-            <input id="user__second-name" type="text" placeholder="Васильевич">
-          </p>
-        </div>
-        <div class="record__col-2">
-          <p class="record__item">
-            <label class="visually-hidden" for="user__tel">Контактный телефон</label>
-            <input id="user__tel" type="tel" placeholder="+7 900 000 00 00">
-          </p>
-          <p class="record__item">
-            <label class="visually-hidden" for="user__email">Контактный e-mail</label>
-            <input id="user__email" type="email" placeholder="email@gmail.com">
-          </p>
-        </div>
-        <p class="record__item">
+        <p class="appointment__item appointment__item--last-name">
+          <label class="visually-hidden" for="user__first-name">Фамилия</label>
+          <input id="user__first-name" type="text" placeholder="Фамилия">
+        </p>
+        <p class="appointment__item appointment__item--first-name">
+          <label class="visually-hidden" for="user__second-name">Имя</label>
+          <input id="user__second-name" type="text" placeholder="Имя">
+        </p>
+        <p class="appointment__item appointment__item--patronymic">
+          <label class="visually-hidden" for="user__last-name">Отчество</label>
+          <input id="user__last-name" type="text" placeholder="Отчество">
+        </p>
+        <p class="appointment__item appointment__item--phone">
+          <label class="visually-hidden" for="user__tel">Контактный телефон</label>
+          <input id="user__tel" type="tel" placeholder="+7 900 000 00 00">
+        </p>
+        <p class="appointment__item appointment__item--email">
+          <label class="visually-hidden" for="user__email">Контактный e-mail</label>
+          <input id="user__email" type="email" placeholder="Контактный e-mail">
+        </p>
+        <p class="appointment__item appointment__item--comment">
           <label class="visually-hidden" for="user__message">Доп. информация для мастера</label>
           <textarea name="user__message" id="user__message" placeholder="Ещё хочу покрасить волосы в синий"></textarea>
         </p>
       </fieldset>
       <fieldset class="filter">
-        <legend class="filter__title">Выберите модель бороды:</legend>
+        <legend class="filter__title">Выберите модель бороды</legend>
         <ul class="filter__list filter__list--row">
           <li class="filter__item filter__item--radio">
             <input class="visually-hidden filter__input filter__input--radio" type="radio" name="type" id="type__admiral" checked>
@@ -136,7 +132,7 @@
         </ul>
       </fieldset>
       <fieldset class="filter filter--margin">
-        <legend class="filter__title">Дополнительные услуги:</legend>
+        <legend class="filter__title">Дополнительные услуги</legend>
         <ul class="filter__list filter__list--column">
           <li class="filter__item filter__item--checkbox">
             <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="service-color" id="service__color" checked>

@@ -58,17 +58,21 @@
   border-radius: 50%;
 }
 
+.filter__input--radio:focus + label::before {
+  box-shadow: 0 0 0 4px rgba(0, 125, 250, 0.6);
+}
+
 .filter__input--radio:checked + label::after {
   content: "";
   position: absolute;
-  top: 15px;
+  top: 17px;
   left: 0;
   right: 0;
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   margin: 0 auto;
-  border: 1px solid #e5ddd5;
+  background-color: #826550;
   border-radius: 50%;
 }
 
@@ -81,6 +85,10 @@
   vertical-align: middle;
   background-color: #ffffff;
   border: 1px solid #e5ddd5;
+}
+
+.filter__input--checkbox:focus + label::before {
+  box-shadow: 0 0 0 4px rgba(0, 125, 250, 0.6);
 }
 
 .filter__input--checkbox:checked + label::after {
