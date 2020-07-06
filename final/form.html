@@ -64,8 +64,8 @@
 
   <section class="appointment">
     <form class="appointment__form appointment__wrapper" method="post" action="https://echo.htmlacademy.ru">
-      <fieldset class="appointment__fields">
-        <legend class="visually-hidden">Данные для записи</legend>
+      <section class="appointment__fields">
+        <h2 class="visually-hidden">Данные для записи</h2>
         <p class="appointment__item appointment__item--last-name">
           <label class="visually-hidden" for="user__first-name">Фамилия</label>
           <input id="user__first-name" type="text" placeholder="Фамилия">
@@ -90,9 +90,9 @@
           <label class="visually-hidden" for="user__message">Доп. информация для мастера</label>
           <textarea name="user__message" id="user__message" placeholder="Ещё хочу покрасить волосы в синий"></textarea>
         </p>
-      </fieldset>
-      <fieldset class="filter">
-        <legend class="filter__title">Выберите модель бороды</legend>
+      </section>
+      <section class="filter">
+        <h2 class="filter__title">Выберите модель бороды</h2>
         <ul class="filter__list filter__list--row">
           <li class="filter__item filter__item--radio">
             <input class="visually-hidden filter__input filter__input--radio" type="radio" name="type" id="type__admiral" checked>
@@ -130,9 +130,9 @@
             </label>
           </li>
         </ul>
-      </fieldset>
-      <fieldset class="filter filter--margin">
-        <legend class="filter__title">Дополнительные услуги</legend>
+      </section>
+      <section class="filter filter--margin">
+        <h2 class="filter__title">Дополнительные услуги</h2>
         <ul class="filter__list filter__list--column">
           <li class="filter__item filter__item--checkbox">
             <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="service-color" id="service__color" checked>
@@ -159,7 +159,7 @@
             <label for="service__polish">Отполировать лысину</label>
           </li>
         </ul>
-      </fieldset>
+      </section>
       <input class="filter__button" type="submit" value="Отправить заявку">
     </form>
   </section>
