@@ -20,8 +20,5 @@
     "editorconfig": "editorconfig-checker -exclude *.css",
     "test": "npm run editorconfig && npm run stylelint",
     "stylelint": "stylelint '**/*.less' --syntax less"
-  },
-  "dependencies": {
-    "normalize.css": "^8.0.1"
   }
 }
