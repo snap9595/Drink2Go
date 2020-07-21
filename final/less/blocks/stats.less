@@ -6,7 +6,6 @@
 }
 
 .stats__wrapper {
-  margin: auto;
   position: relative;
 
   @media (min-width: @tablet-width) {
@@ -23,6 +22,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: stretch;
+    margin: auto;
     max-width: 960px;
     top: @stats-shift;
     margin-bottom: @stats-shift;
@@ -141,7 +141,7 @@
   text-align: center;
   color: fade(#ffffff, 30%);
 
-  @media (min-width: @mobile-width-only) {
+  @media (min-width: @tablet-width) {
     display: none;
   }
 }
