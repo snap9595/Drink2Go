@@ -1,5 +1,5 @@
-var navMain = document.querySelector('.main-nav');
-var navToggle = document.querySelector('.main-nav__toggle');
+const navMain = document.querySelector('.main-nav');
+const navToggle = document.querySelector('.main-nav__toggle');
 
 navMain.classList.remove('main-nav--nojs');
 
@@ -13,15 +13,15 @@ navToggle.addEventListener('click', function() {
   }
 });
 
-var link = document.querySelector('.js-login');
-var popup = document.querySelector('.modal');
-var close = popup.querySelector('.modal__button--close');
-var form = popup.querySelector('form');
-var login = popup.querySelector('[name=login]');
-var password = popup.querySelector('[name=password]');
+const link = document.querySelector('.js-login');
+const popup = document.querySelector('.modal');
+const close = popup.querySelector('.modal__button--close');
+const form = popup.querySelector('form');
+const login = popup.querySelector('[name=login]');
+const password = popup.querySelector('[name=password]');
 
-var isStorageSupport = true;
-var storage = '';
+let isStorageSupport = true;
+let storage = '';
 
 try {
   storage = localStorage.getItem('login');
