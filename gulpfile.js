@@ -125,12 +125,17 @@ const server = (done) => {
 
 exports.server = server;
 
+// Reload
+const reload = done => {
+  sync.reload();
+  done();
+}
 // Watcher
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/js/script.js", gulp.series(scripts));
-  gulp.watch("source/*.html", gulp.series(html, sync.reload));
+  gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
 // Build
@@ -154,12 +159,12 @@ exports.build = build;
 exports.default = gulp.series(
   clean,
   gulp.parallel(
-    styles,
+    // styles,
     html,
-    scripts,
-    sprite,
-    copy,
-    createWebp,
+    // scripts,
+    // sprite,
+    // copy,
+    // createWebp,
   ),
   gulp.series(
     server,
