@@ -89,6 +89,7 @@ const sprite = () => {
 exports.sprite = sprite;
 
 // Copy
+
 const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
@@ -151,7 +152,7 @@ const build = gulp.series(
     sprite,
     copy,
     images,
-    createWebp,
+    createWebp
   ));
 
 exports.build = build;
@@ -161,12 +162,12 @@ exports.build = build;
 exports.default = gulp.series(
   clean,
   gulp.parallel(
-    // styles,
+    styles,
     html,
-    // scripts,
-    // sprite,
-    // copy,
-    // createWebp,
+    scripts,
+    sprite,
+    copy,
+    createWebp
   ),
   gulp.series(
     server,
