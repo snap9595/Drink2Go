@@ -126,10 +126,12 @@ const server = (done) => {
 exports.server = server;
 
 // Reload
+
 const reload = done => {
   sync.reload();
   done();
 }
+
 // Watcher
 
 const watcher = () => {
