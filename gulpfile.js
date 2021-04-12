@@ -94,7 +94,8 @@ const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
-    "source/img/**/*.{jpg,png,svg}",
+    "source/img/**/*.svg",
+    "!source/img/icons/*.svg",
   ], {
     base: "source"
   })
@@ -168,6 +169,7 @@ exports.default = gulp.series(
     scripts,
     sprite,
     copy,
+    images,
     createWebp
   ),
   gulp.series(
