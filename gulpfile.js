@@ -34,7 +34,6 @@ export const styles = () => {
 
 const html = () => {
   return gulp.src('source/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
 
@@ -42,8 +41,6 @@ const html = () => {
 
 const scripts = () => {
   return gulp.src('source/js/script.js')
-    .pipe(terser())
-    .pipe(rename('script.min.js'))
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
 }
@@ -76,14 +73,17 @@ const svg = () =>
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 
-const sprite = () => {
+export const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
+    .pipe(svgo())
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename('sprite.svg'))
     .pipe(gulp.dest('build/img'));
 }
+
+
 
 // Copy
 
