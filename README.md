@@ -8,7 +8,7 @@
 
 ## Тестирование
 
-- Запуск: `npm test`
+- Запуск: `npm lint`
 
 Тестирует Stylelint и EditorConfig.
 
