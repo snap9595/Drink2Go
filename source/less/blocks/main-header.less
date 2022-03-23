@@ -1,34 +1,34 @@
-.page-header {
+.main-header {
   display: flex;
   flex-direction: column;
   background-color: #242424;
 }
 
-.page-header__logo {
+.main-header__logo {
   height: 85px;
 
   text-align: center;
 }
 
-.page-header__logo img {
+.main-header__logo img {
   width: 226px;
   height: 85px;
 }
 
-.page-header__logo-barbershop {
+.main-header__logo-barbershop {
   display: none;
 }
 
-.page-header__logo-mustache {
+.main-header__logo-mustache {
   display: none;
 }
 
 @media (min-width: @tablet-width) {
-  .page-header {
+  .main-header {
     background-color: #000000;
   }
 
-  .page-header__logo {
+  .main-header__logo {
     order: 2;
     width: 100%;
     height: 400px;
@@ -43,8 +43,8 @@
     }
   }
 
-  .page-header--inner {
-    .page-header__logo {
+  .main-header--inner {
+    .main-header__logo {
       position: relative;
       height: 213px;
 
@@ -70,7 +70,7 @@
     }
   }
 
-  .page-header__logo img {
+  .main-header__logo img {
     display: block;
     width: 370px;
     height: auto;
@@ -78,21 +78,21 @@
     margin-top: 40px;
   }
 
-  .page-header__logo-barbershop {
+  .main-header__logo-barbershop {
     display: inline-block;
   }
 }
 
 
 @media (min-width: @desktop-width) {
-  .page-header__logo {
+  .main-header__logo {
     height: 648px;
     background-position: center 0;
     background-size: cover;
   }
 
-  .page-header--inner {
-    .page-header__logo {
+  .main-header--inner {
+    .main-header__logo {
       height: 307px;
 
       &::before,
@@ -102,11 +102,11 @@
     }
   }
 
-  .page-header__logo img {
+  .main-header__logo img {
     margin-top: 57px;
   }
 
-  .page-header__logo-mustache {
+  .main-header__logo-mustache {
     display: inline-block;
   }
 }
