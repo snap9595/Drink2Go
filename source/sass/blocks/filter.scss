@@ -20,7 +20,7 @@
 
 .filter__title {
   margin: 0;
-  padding-top: 53px;
+  padding-top: 41px;
   text-align: center;
   color: var(--base-primary);
   font-size: 0.75rem;
@@ -122,6 +122,7 @@
 
 .filter__reset {
   display: block;
+  width: 100%;
   padding: 8px 20px;
   margin: 0 auto;
   margin-top: 10px;
@@ -151,6 +152,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    width: max-content;
     margin-top: 20px;
     padding: 8px 40px;
   }

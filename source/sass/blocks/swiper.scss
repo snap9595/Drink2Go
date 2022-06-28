@@ -19,13 +19,18 @@
   position: absolute;
   content: "";
   z-index: 10;
-  top: 38%;
-  left: 36px;
+  top: 49%;
+  left: 7px;
   display: inline-block;
   padding: 6px;
   border: solid var(--base-primary);
   border-width: 0 2px 2px 0;
   transform: rotate(136deg);
+
+  @media (min-width: $tablet-width) {
+    top: 38%;
+    left: 36px;
+  }
 
   @media (min-width: $desktop-width) {
     top: 49%;
@@ -37,13 +42,18 @@
   position: absolute;
   content: "";
   z-index: 10;
-  top: 38%;
-  right: 36px;
+  top: 49%;
+  right: 7px;
   display: inline-block;
   padding: 6px;
   border: solid var(--base-primary);
   border-width: 0 2px 2px 0;
   transform: rotate(315deg);
+
+  @media (min-width: $tablet-width) {
+    top: 38%;
+    right: 36px;
+  }
 
   @media (min-width: $desktop-width) {
     top: 49%;
