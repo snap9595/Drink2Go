@@ -3,16 +3,17 @@
   font-style: normal;
   font-size: 1rem;
   line-height: 150%;
+  display: flex;
+  align-items: center;
+  margin-top: 33px;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    align-items: center;
     justify-content: flex-end;
-    margin-top: 33px;
+    margin-top: 42px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 27px;
+    margin-top: 36px;
   }
 }
 
@@ -20,18 +21,24 @@
   font-weight: 600;
   font-size: 1rem;
   line-height: 150%;
+  margin-top: 6px;
+  margin-bottom: 3px;
 }
 
 .sorting__details {
   position: relative;
   margin-left: 9px;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 13px;
+  }
 }
 
 .sorting__details-summary {
   position: relative;
   font-weight: 600;
   list-style-type: none;
-  padding: 5px 28px 5px 10px;
+  padding: 5px 26px 5px 8px;
   cursor: pointer;
 }
 
