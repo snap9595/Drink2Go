@@ -1,0 +1,48 @@
+.footer-about {
+  padding: 20px;
+  padding-top: 19px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.footer-about__title {
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 0.88rem;
+  line-height: 143%;
+  letter-spacing: 0.02em;
+  color: var(--base-primary);
+}
+
+.footer-about__address {
+  padding-left: 20px;
+  margin-bottom: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.88rem;
+  line-height: 143%;
+  background: url("../img/icons/pin-adress.svg") no-repeat 2px top/13px 16px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 2px;
+  }
+}
+
+.footer-about__phone {
+  font-size: 0.88rem;
+  line-height: 143%;
+  padding-left: 19px;
+  text-decoration: none;
+  color: var(--base-black);
+  background: url("../img/icons/phone.svg") no-repeat 2px 2px/13px 16px;
+
+  &:hover {
+    color: var(--base-primary);
+  }
+
+  &:active {
+    color: var(--primary-darker);
+  }
+}

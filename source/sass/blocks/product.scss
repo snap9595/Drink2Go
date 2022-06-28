@@ -1,0 +1,26 @@
+.product {
+  margin-top: 17px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    margin-top: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
+}
+
+.product__wrapper {
+  display: grid;
+  row-gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
