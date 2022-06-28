@@ -1,0 +1,118 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 0;
+  padding: 0;
+  padding-bottom: 60px;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    width: 394px;
+    margin-left: auto;
+    margin-top: 61px;
+    padding-bottom: 103px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-end;
+    width: 412px;
+    column-gap: 20px;
+    margin-right: 20px;
+    padding-bottom: 118px;
+  }
+}
+
+.pagination__text {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.pagination__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  height: 40px;
+  color: var(--base-primary);
+  background-color: var(--base-white);
+  border-radius: 4px;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    min-height: 40px;
+  }
+
+  &:hover {
+    color: var(--base-white);
+    background-color: var(--primary-lighter);
+  }
+
+  &:focus {
+    outline: none;
+    color: var(--base-white);
+    background-color: var(--primary-lighter);
+  }
+
+  &:active {
+    color: var(--base-white);
+    background-color: var(--primary-darker);
+  }
+
+  &:disabled {
+    background-color: var(--light-grey);
+  }
+}
+
+.pagination__link--button {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    min-width: max-content;
+    padding: 8px 20px;
+  }
+}
+
+.pagination__link--forward {
+
+  transform: rotate(180deg);
+
+  @media (min-width: $tablet-width) {
+    width: 104px;
+    transform: rotate(0deg);
+  }
+}
+
+.pagination__link--button::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  padding: 3px;
+  border: solid var(--base-primary);
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.pagination__link--numbers {
+  padding: 8px;
+}
+
+.pagination__link--active {
+  pointer-events: none;
+  color: var(--base-black);
+  background: transparent;
+}
+
+.pagination__link--button:hover::after,
+.pagination__link--button:active::after,
+.pagination__link--button:disabled::after {
+  border: solid var(--base-white);
+  border-width: 0 2px 2px 0;
+}

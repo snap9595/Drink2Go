@@ -1,0 +1,120 @@
+.main-nav__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: var(--base-white);
+  border-bottom: 1px solid var(--base-secondary);
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
+.main-nav__item {
+  border-top: 1px solid var(--base-secondary);
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 22px;
+  }
+}
+
+.main-nav__item:last-child {
+  margin-right: 0;
+}
+
+.main-nav__link {
+  display: block;
+  width: 100%;
+  min-height: 57px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--base-black);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 20px;
+    min-height: 80px;
+
+    &--active {
+      border-bottom: 2px solid var(--base-primary);
+    }
+
+    &:hover {
+      color: var(--base-primary);
+    }
+  }
+
+  &:active {
+    background-color: var(--base-secondary);
+  }
+}
+
+@media (max-width: $mobile-only) {
+  .main-nav__wrapper {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__wrapper {
+    position: absolute;
+    z-index: 10;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 60px;
+    width: 100%;
+    background-color: var(--base-white);
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
+
+  .main-nav--closed .main-nav__wrapper {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    position: absolute;
+    z-index: 9999;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 60px;
+    width: 100%;
+    background-color: var(--base-white);
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__wrapper {
+    min-width: 390px;
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__wrapper {
+    min-width: 460px;
+  }
+}

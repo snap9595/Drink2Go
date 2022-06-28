@@ -33,13 +33,17 @@ export const styles = () => {
 
 const html = () => {
   return gulp.src('source/*.html')
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest('build'));
 }
 
 // Scripts
 
 const scripts = () => {
-  return gulp.src('source/js/script.js')
+  return gulp.src('source/js/*.js')
+    .pipe(terser())
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
 }
@@ -60,7 +64,7 @@ const copyImages = () => {
 // WebP
 
 const createWebp = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/icons/*.{png,jpg}','!source/img/*.png'])
     .pipe(squoosh({
       webp: {}
     }))
@@ -70,13 +74,17 @@ const createWebp = () => {
 // SVG
 
 const svg = () =>
-  gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
-    .pipe(svgo())
-    .pipe(gulp.dest('build/img'));
+  gulp.src(['source/img/**/*.svg', '!source/img/sprite/*.svg'])
+  .pipe(svgo())
+  .pipe(gulp.dest('build/img'));
 
 const sprite = () => {
-  return gulp.src('source/img/icons/*.svg')
-    .pipe(svgo())
+  return gulp.src('source/img/sprite/*.svg')
+    .pipe(svgo({
+      plugins: [{
+        removeViewBox: false
+      }]
+    }))
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -96,7 +104,6 @@ const copy = (done) => {
     .pipe(gulp.dest('build'))
   done();
 }
-
 
 // Clean
 
@@ -129,7 +136,7 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  gulp.watch('source/js/script.js', gulp.series(scripts));
+  gulp.watch('source/js/*.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
 

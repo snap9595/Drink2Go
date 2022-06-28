@@ -23,7 +23,7 @@
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "lint": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "start": "gulp"
@@ -48,6 +48,8 @@
   },
   "type": "module",
   "dependencies": {
+    "jquery": "^3.6.0",
+    "slick-carousel": "^1.8.1",
     "swiper": "^8.2.4"
   }
 }
